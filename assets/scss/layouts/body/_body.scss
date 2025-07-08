@@ -9,8 +9,9 @@
 
 
 .body {
-    margin-bottom: spacing("double") * 2;
+    margin-bottom: 0;
     margin-top: spacing("single"); // 1
+    color:#000;
 
     @include breakpoint("medium") {
         margin-top: spacing("single") + spacing("base"); // 1
@@ -29,30 +30,20 @@
     @include grid-column(12);
 }
 
-.page-region {
-    @include grid-column(12);
-    float: right;
-    width: 100%;
-
-    @include breakpoint("medium") {
-        width: 75%;
-    }
-}
-
 .page-content--centered {
-
-    @include breakpoint("medium") {
-        @include grid-column(
-            $columns: 8,
-            $center: true
-        );
-    }
+	margin-top:-1rem;
 }
 
 .page-content--textCenter {
     text-align: center;
 }
-
+.page-heading {
+    font-weight:700;
+    color:#000;
+    letter-spacing:-2px;
+    font-size:2rem;
+    margin:0 0 2rem;
+}
 .page-sidebar {
     @include grid-column(12);
     position: relative;
@@ -64,4 +55,1595 @@
             @include grid-column(9);
         }
     }
+}
+input:focus, button:focus, textarea:focus, select:focus, details:focus, [href]:focus, [tabindex]:not([tabindex="-1"]):focus, [contenteditable=true]:focus {
+    outline:none !important;
+    outline-offset:none !important;
+}
+hr {
+    border:solid #e5e5e5;
+    border-width:2px 0 0;
+    clear:both;
+    height:0;
+    margin:2rem 0 1.9375rem;
+}
+@media screen and (max-width:800px) {
+    section.page {
+        margin-top:-2rem;
+    }
+}
+// Custom Additions
+// =============================================================================
+input:focus + label {
+    outline:none !important;
+}
+.splash {
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+}
+.wall-splash-bar {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/home/white-wall.jpg') top center no-repeat;
+    background-size:cover;
+    padding:2.5rem 0 .1rem;
+    margin-bottom:2.5rem;
+    box-shadow:inset 6px 156px 13px 3px rgba(255,255,255,0.1), inset 6px 20px 53px 3px rgba(255,255,255,0.8);
+}
+.home-splash a {
+    height:100%;
+    width:100%;
+    text-decoration:none !important;
+    display:block;
+}
+article.splash {
+    display:block;
+    margin-top:-40px;
+}
+.home-splash-item {
+    height:330px;
+    background:000;
+}
+.top-splash-bar {
+    clear:both;
+    display:block;
+}
+.home-college-top {
+    margin-left:auto;
+    margin-right:auto;
+    max-width:1900px;
+    width:100%;
+}
+.home-splash-banner {
+    max-width:1900px;
+    width:325px;
+    margin-left:auto;
+    background:linear-gradient(rgba(0,0,0,0.8) 30%, rgba(0,0,0,1) 100%);
+    padding:0 1.5rem 1.5rem;
+    clear:both;
+    float:none;
+    position:relative;
+    top:152px;
+}
+.home-splash-link h3 {
+    color:#FFF;
+    font-weight:700;
+    padding-top:1rem;
+    letter-spacing:-1px;
+    font-size:2rem;
+    line-height:2.75rem;
+    margin-bottom:1rem;
+}
+.home-splash-banner .splash-button {
+    background:none;
+    color:#FFF;
+    border:2px solid #FFF;
+    padding: 8px 0 6px;
+    text-transform:uppercase;
+    font-size:16px;
+    text-align:center;
+}
+.home-splash-banner img {
+    max-width:42px;
+    float:left;
+    padding:5px 10px 0 0;
+    margin-right:2px;
+}
+.top-splash-bar .home-splash-item.home-splash-college a.home-splash-link .home-splash-banner {
+    top:188px;
+    margin-left: auto;
+}
+.home-splash-subbanner img {
+    padding:0 5px 0 0;
+    max-width:38px;
+    margin:0 3px 0 -2px;
+}
+.top-splash-bar {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mid-splash-bar, .low-splash-bar {
+    display:flex;
+    max-width:1900px;
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+    width:100%;
+    float:none;
+}
+.mid-splash-bar .home-splash-item, .low-splash-bar .home-splash-item {
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.home-splash-college {
+    width:100%;
+    display:block;
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/college_20250409.jpg') no-repeat center 72%, #000;
+}
+.home-splash-nfl {
+    flex:1;
+    display:inline-block;
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/nfl_20250217.jpg') no-repeat center left;
+    background-size:cover;
+    margin-right:1.25rem;
+    margin-bottom:2.5rem;
+}
+.home-splash-nhl {
+    flex:1;
+    display:inline-block;
+    background:url("https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/nhl_20250422.jpg") no-repeat center left;
+    background-size:cover;
+    margin-left:1.25rem;
+    margin-bottom:2.5rem;
+}
+.home-splash-parks {
+    flex:1;
+    display:inline-block;
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/nationalparks_20230413.jpg') no-repeat center left;
+    background-size:cover;
+    margin-right:1.25rem;
+    margin-bottom:2.5rem;
+}
+.home-splash-skylines {
+    flex:1;
+    display:inline-block;
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/skyline_20230413.jpg') no-repeat center left;
+    background-size:cover;
+    margin-left:1.25rem;
+    margin-bottom:2.5rem;
+}
+@media screen and (min-width:801px) {
+	.home-splash-mobile, .college-splash-mobile, .nfl-splash-mobile, .nhl-splash-mobile, .nascar-splash-mobile, .mlb-splash-mobile, .usskyline-splash-mobile, .worldskyline-splash-mobile, .nationalparks-splash-mobile, .icons-splash-mobile, .golfhorse-splash-mobile, .lighthouse-splash-mobile {
+		display:none;
+	}
+}
+@media screen and (max-width:800px) {
+    .page-heading {
+        margin:2rem 0 1.5rem;
+    }
+    .home-splash {
+        display:none;
+    }
+    .home-splash-mobile { 
+        display:block;
+    }
+    .college-splash-mobile, .nfl-splash-mobile, .nhl-splash-mobile, .nascar-splash-mobile, .mlb-splash-mobile, .usskyline-splash-mobile, .worldskyline-splash-mobile, .nationalparks-splash-mobile, .icons-splash-mobile, .golfhorse-splash-mobile, .lighthouse-splash-mobile {
+        display:block;
+        margin:1.25rem 0 3.75rem;
+    }
+    .home-splash-mobile-header, .college-splash-mobile-header, .nfl-splash-mobile-header, .nhl-splash-mobile-header, .nascar-splash-mobile-header, .mlb-splash-mobile-header, .usskyline-splash-mobile-header, .worldskyline-splash-mobile-header, .nationalparks-splash-mobile-header, .icons-splash-mobile-header, .golfhorse-splash-mobile-header, .lighthouse-splash-mobile-header {
+        margin:-0.5rem 0 -1.25rem;
+        width:100%;
+    }
+    .home-splash-mobile h3, .college-splash-mobile h3, .nfl-splash-mobile h3, .nhl-splash-mobile h3, .nascar-splash-mobile h3, .mlb-splash-mobile h3, .usskyline-splash-mobile h3, .worldskyline-splash-mobile h3, .nationalparks-splash-mobile h3, .icons-splash-mobile h3, .golfhorse-splash-mobile h3, .lighthouse-splash-mobile h3 {
+        text-align:center;
+        font-weight:500;
+        text-transform:uppercase;
+        letter-spacing:-.5px;
+        color:#000;
+    }
+    .home-category-listing {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+        margin-bottom:-1rem;
+    }
+    .home-category-section {
+        border:2px solid #E5E5E5;
+        padding:0.75rem 0.5rem 0;
+        text-align:center;
+        margin:0.25rem;
+    }
+    .home-category-listing a {
+        text-decoration:none;
+    }
+    .icons-category-mobile-ncaa {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -0px -0px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-nfl {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -0px -102px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-nhl {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -102px -0px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-nascar-bars {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -102px -102px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-mlb {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -0px -204px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-usflag {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -102px -204px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-globe {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -204px -0px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-nationalparks {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -204px -102px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-icons {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -204px -204px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-golf {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -0px -306px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-lighthouse {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -102px -306px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-framing {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -204px -306px;
+        width: 100px;
+        height: 100px;
+    }
+    .icons-category-mobile-more {
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/logos/icons-category-spritesheet.png?20220414') no-repeat -306px -0px;
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width:700px) {
+    .home-category-listing {
+        grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    }
+    .home-category-section {
+        padding:1.5rem 0.5rem 0;
+    }
+}
+.home-products {
+    margin:4rem 0 3rem;
+}
+.featured-start {
+    margin-top:1rem;
+}
+.home-whyus {
+    padding:3rem 0 3rem;
+    text-align:center;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top:-1.5rem;
+    background: rgb(9,107,196);
+    background: -moz-radial-gradient(circle, rgba(9,107,196,1) 19%, rgba(9,72,130,1) 81%, rgba(9,72,130,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(9,107,196,1) 19%, rgba(9,72,130,1) 81%, rgba(9,72,130,1) 100%);
+    background: url("https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/egg-shell.png"), radial-gradient(circle, rgba(9,107,196,1) 19%, rgba(9,72,130,1) 81%, rgba(9,72,130,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#096bc4",endColorstr="#094882",GradientType=1);
+}
+.whyus {
+    max-width:1378px;
+    width:84.5%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.whyus-list {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+.whyus-item {
+    display:inline-block;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    padding:0 1rem 1.25rem;
+}
+.whyus-img {
+    width:150px;
+    height:150px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:50%;
+    padding:1rem;
+}
+.whyus-1, .whyus-2, .whyus-3 {
+    box-shadow:0 -10px 20px rgba(0,0,0,.1);
+}
+.whyus-1 {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/home/whyus-1.svg') #FFF no-repeat center;
+    background-size:70%;
+}
+.whyus-2 {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/home/whyus-2.svg') #FFF no-repeat center;
+    background-size:70%;
+}
+.whyus-3 {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/home/whyus-3.svg') #FFF no-repeat center;
+    background-size:60%;
+}
+.home-whyus h2 {
+    color:#FFF;
+    font-weight:700;
+    letter-spacing:-1px;
+    font-size:2rem;
+    margin-bottom:3rem;
+}
+.home-whyus h3 {
+    color:#FFF;
+    font-size:1.25rem;
+    margin:1.5rem 0 1rem;
+    font-weight:500;
+    letter-spacing:-.5px;
+}
+.home-whyus h4 {
+    margin: 0;
+    font-size: .75rem;
+    text-transform:uppercase;
+    font-weight:500;
+    color:#FFF;
+}
+@media screen and (max-width:675px) {
+    .whyus-list {
+        display:block;
+        margin-bottom:0;
+    }
+    .whyus-item {
+        display:inline-block;
+        flex:none;
+        margin-bottom:2rem;
+    }
+}
+.home-subfooter {
+    margin:4rem 0 4rem;
+    display:flex;
+}
+.home-about-left, .home-about-right {
+    max-width:49.5%;
+}
+.home-about-left {
+    min-width:50%;
+    min-height:400px;
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/about-us/bg-location.jpg');
+    background-size:cover;
+    border-radius:10% 0;
+}
+.home-about-right {
+    margin-left:4rem;
+}
+.home-about-right h2 {
+    margin-top:-0.75rem;
+    font-weight:700;
+    letter-spacing:-1px;
+    font-size:2rem;
+    color:#096bc4;
+}
+.home-button-subfooter {
+    margin-top: 2.5rem;
+    padding-bottom: 0.75rem;
+}
+.home-about-button {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-size: 16px;
+    padding: 15px 1rem 13px;
+    border: none;
+    background: #096bc4;
+    color: #FFF;
+}
+.home-about-button:hover {
+    background:#666;
+}
+a.home-about-button, a.home-about-button:hover {
+    text-decoration:none;
+    color:#FFF;
+}
+@media screen and (max-width:950px) {
+    .home-subfooter {
+        display:block;
+        padding:0 1rem;
+    }
+    .home-about-left, .home-about-right {
+        max-width:100%;
+    }
+    .home-about-left {
+        min-height:300px;
+        background-position-y:71%;
+        margin-bottom:2rem;
+    }
+    .home-about-right {
+        margin-left:0;
+    }
+    .home-button-subfooter {
+        text-align:center;
+    }
+}
+.contentpage-new-section, .contentpage-faq-category, .contentpage-terms-category, .contentpage-privacy-category {
+    border:2px solid #C7C7C7;
+    margin-bottom:2rem;
+}
+.contentpage-new-section h2, .contentpage-terms-title, .contentpage-privacy-title {
+    text-align:center;
+    font-weight:500;
+    color:#000;
+    letter-spacing:-1px;
+    text-transform:uppercase;
+    font-size:1.75rem;
+    background:#E5E5E5;
+    margin:0;
+    padding:0.5rem;
+    border-bottom:2px solid #C7C7C7;
+}
+.contentpage-new-section hr {
+    margin:-1rem 1.75rem 0;
+}
+.contentpage-new-category {
+    padding:1.5rem;
+    margin-top:-2rem;
+}
+.contentpage-new-category-last {
+    padding-bottom:0 !important;
+}
+.contentpage-new-category h3 {
+    color:#096BC4;
+    font-weight:500;
+    letter-spacing:-.5px;
+}
+.contentpage-new-category ul {
+    list-style-type:none;
+    margin-left:0;
+}
+.contentpage-new-category li p {
+    margin-bottom:.75rem;
+}
+.contentpage-new-category img {
+    float:left;
+    max-width:28px;
+    margin-right:1rem;
+}
+.contentpage-faq-title {
+    text-align:center;
+    background:#E5E5E5;
+    text-transform:uppercase;
+    color:#000;
+    padding:1rem 0;
+    margin-top:0;
+    border-bottom:2px solid #C7C7C7;
+}
+.contentpage-faq-section {
+    padding:0 1.5rem;
+    margin-top:-1rem;
+}
+.contentpage-faq-question h3, .contentpage-faq-question-spaced h3{
+    color:#096BC4;
+    font-weight:500;
+    letter-spacing:-1px;
+    margin-bottom:1rem;
+}
+.contentpage-faq-question-spaced h3 {
+    margin-bottom:-1rem;
+}
+.contentpage-faq-subanswer h4 {
+    text-transform:uppercase;
+    letter-spacing:-.5px;
+    font-weight:500;
+}
+.contentpage-faq-list {
+    margin-top:2.5rem;
+}
+.contentpage-faq-category hr {
+    margin: 1rem 0 -1rem;
+}
+.contentpage-terms-section, .contentpage-privacy-section {
+    padding:1.5rem 1.75rem 0;
+}
+.contentpage-frameinfo h5 {
+    font-size:1.2rem;
+    font-weight:500;
+    color:#096BC4;
+    text-transform:none;
+    letter-spacing:-.5px;
+}
+.contentpage-frameinfo ul {
+    list-style-type:none;
+}
+.contentpage-fanclub {
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:-0.75rem;
+}
+.contentpage-fanclub-header p {
+    text-align:center;
+    margin:1rem 0;
+    padding-bottom:1rem;
+    color:#096BC4;
+    text-transform:uppercase;
+    font-weight:500;
+    letter-spacing:2px;
+    border-bottom:2px solid #E5E5E5;
+    font-size:.75rem;
+}
+.contentpage-fanclub-section {
+    margin:1rem 0 -1rem;
+}
+.contentpage-fanclub-terms {
+    font-size:.75rem;
+    color:rgba(0,0,0,.66);
+}
+.emotive-fanclub {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contentpage-fanclub-signup .fan-club-subscribe #mc_embed_signup {
+    padding:0 2rem 1rem !important;
+}
+.contentpage-fanclub-signup .fan-club-subscribe #mc_embed_signup h2 {
+    letter-spacing:-1px;
+    padding-top:1.5rem;
+    font-weight:500;
+    text-transform:uppercase;
+    color:#000;
+}
+.contentpage-fanclub .contentpage-fanclub-signup .fan-club-subscribe #mc_embed_signup form#mc-embedded-subscribe-form.validate #mc_embed_signup_scroll .mc-field-group input#mce-EMAIL.required, .contentpage-fanclub .contentpage-fanclub-signup .fan-club-subscribe #mc_embed_signup form#mc-embedded-subscribe-form.validate #mc_embed_signup_scroll .mc-field-group input#mce-MMERGE1 {
+    border:2px solid #C7C7C7;
+    height:50px;
+}
+.contentpage-fanclub .contentpage-fanclub-signup .fan-club-subscribe #mc_embed_signup form#mc-embedded-subscribe-form.validate #mc_embed_signup_scroll #mce-responses.clear {
+    height:0;
+}
+.contentpage-usa h2 {
+    color:#096BC4;
+    letter-spacing:-.5px;
+    font-weight:500;
+}
+.contentpage-promo h3 {
+    text-align:center;
+    color:#096BC4;
+    font-weight:500;
+    letter-spacing:-1px;
+    margin-top:-0.5rem;
+}
+.contentpage-privacy-subsection h3, .contentpage-privacy-section h3 {
+    margin-top:0;
+    color:#096BC4;
+    font-weight:500;
+    letter-spacing:-1px;
+}
+.contentpage-reviews-content {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items:center;
+    gap:2rem 1rem;
+}
+.contentpage-reviews-item {
+    padding:1.5rem;
+    border:2px solid #C7C7C7;
+    max-width:48%;
+}
+.contentpage-reviews-image, .contentpage-reviews-rating {
+    text-align:center;
+    margin-bottom:1rem;
+}
+.contentpage-reviews-image img {
+    max-height:271px;
+}
+.contentpage-reviews-button {
+    background:#096BC4;
+    color:#FFF;
+    text-decoration:none;
+    text-transform:uppercase;
+    padding:1rem;
+}
+.contentpage-reviews-link {
+    margin:2rem 0 1rem;
+    text-align:center;
+}
+.contentpage-about {
+    max-width:1600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.contentpage-about-logo {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/pages/blakeway-collage.jpg') no-repeat;
+    background-size:cover;
+    text-align:center;
+    background-position:center;
+}
+.contentpage-about-logo img {
+    max-width:400px;
+    margin:2rem 0;
+}
+.contentpage-about-intro {
+    background:url("https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/egg-shell.png"), radial-gradient(circle, #096bc4 19%, #094882 81%, #094882 100%);
+    padding:2rem 2rem 3rem;
+}
+.contentpage-about-intro h3 {
+    color:#FFF;
+    text-align:center;
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:-1px;
+}
+.contentpage-about-intro p {
+    max-width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.5rem;
+    letter-spacing:-.5px;
+    color:#FFF;
+    font-weight:500;
+    text-rendering:optimizeLegibility;
+}
+.contentpage-about-photographers {
+    background:radial-gradient(circle, rgba(255,255,255,80%) 19%, rgba(255,255,255,20%) 51%, rgba(255,255,255,0) 100%), url("https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/home/white-wall.jpg") top center no-repeat;
+    padding:2rem 2rem 3rem;
+}
+.contentpage-about-photographers h3, .contentpage-about-licensed h3, .contentpage-about-quality h3, .contentpage-about-gigapixel h3, .contentpage-about-work h3, .contentpage-about-contact h3 {
+    color:#096bc4;
+    text-align:center;
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:-1px;
+    text-shadow:0 0 5px #FFF, 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #FFF;
+}
+.contentpage-about-photographers p {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.25rem;
+    color: #096bc4;
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
+    letter-spacing: -.5px;
+    text-shadow:0 0 5px #FFF, 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #FFF
+}
+.contentpage-about-licensed {
+    padding:2rem 2rem 3rem;
+}
+.contentpage-about-quality {
+    padding:0 2rem;
+}
+.contentpage-about-licensed p, .contentpage-about-quality p, .contentpage-about-work p {
+    max-width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.15rem;
+}
+.contentpage-about-licensors ul {
+    display: -ms-flexbox;
+    display:flex;
+    list-style-type: none;
+}
+.contentpage-about-gigapixel h3, .contentpage-about-office h3 {
+    text-align:left;
+}
+.contentpage-about-gigapixel {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/pages/about-bwgigapixel.jpg') no-repeat center;
+    background-size:cover;
+    padding:5rem 2rem 5rem;
+    margin-top:4rem;
+}
+.contentpage-about-gigapixelcontent {
+    max-width:50%;
+    padding:1rem 2rem 3rem;
+    background:rgba(255,255,255,.85);
+}
+.contentpage-about-gigapixel p {
+    font-size:1.15rem;
+}
+.contentpage-about-gigapixel-button {
+    margin:2.5rem 0 1.5rem;
+}
+.contentpage-about-gigapixel-button a {
+    background:#096bc4;
+    color:#FFF;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:500;
+    padding:1rem;
+}
+.contentpage-about-office {
+    display:flex;
+    background:#096bc4;
+}
+.contentpage-about-office h3, .contentpage-about-minnesota h3 {
+    color:#FFF;
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:-1px;
+}
+.contentpage-about-officeleft {
+    width:60%;
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/about-us/bg-location.jpg') no-repeat left;
+    background-size:cover;
+}
+.contentpage-about-officeright {
+    max-width:40%;
+    font-size:1.5rem;
+    padding:1rem 3.5rem;
+    color:#FFF;
+}
+.contentpage-about-minnesota {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/pages/about-minnesota.jpg') bottom right no-repeat,#096bc4;
+    background-size:80%;
+    padding:2rem 3.5rem 3rem;
+}
+.contentpage-about-minnesota p {
+    max-width: 35%;
+    color: #FFF;
+    font-size: 1.5rem;
+    text-shadow:0 0 5px #096bc4, 0 0 10px #096bc4, 0 0 20px #096bc4, 0 0 30px #096bc4;
+}
+.contentpage-about-work {
+    margin:3.5rem 0;
+}
+.contentpage-about-work-img {
+    text-align:center;
+}
+.contentpage-about-work-img img {
+    border-radius:40px 0;
+}
+.contentpage-about-contact {
+    margin-bottom:.75rem;
+}
+.contentpage-about-contactlinks {
+    display:flex;
+}
+.contentpage-about-contactlink {
+    width:33%;
+    margin:1rem;
+    background:#096bc4;
+    padding:2rem 2rem 3rem;
+    text-align:center;
+}
+.contentpage-about-contactlink h4 {
+    color:#FFF;
+    margin:1rem 0 2rem;
+    font-weight:500;
+    letter-spacing:-.5px;
+    font-size:1.5rem;
+}
+.contentpage-about-aboutnews {
+    background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/pages/about-news.png') no-repeat center;
+    background-size: contain;
+    min-height: 100px;
+}
+.contentpage-about-aboutfaq {
+    background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/pages/about-faq.png') no-repeat center;
+    background-size: contain;
+    min-height: 100px;
+}
+.contentpage-about-aboutcontact {
+    background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/pages/about-contact.png') no-repeat center;
+    background-size: contain;
+    min-height: 100px;
+}
+.contentpage-about-contactlink a {
+    background:#000;
+    padding:1rem;
+    color:#FFF;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-weight:500;
+}
+@media screen and (min-width:1001px) {
+    .contentpage-about-gigapixel-mobile, .contentpage-about-office-mobile, .contentpage-about-minnesota-mobile {
+        display:none;
+    }
+    .contentpage-about-gigapixel, .contentpage-about-minnesota {
+        display:block;
+    }
+}
+@media screen and (max-width:1440px) {
+    .contentpage-about-minnesota p {
+        max-width:50%;
+    }
+}
+@media screen and (max-width:1100px) {
+    .contentpage-about-officeleft, .contentpage-about-officeright {
+        max-width:50%;
+    }
+}
+@media screen and (max-width:1000px) {
+    .contentpage-about-gigapixel-mobile, .contentpage-about-office-mobile, .contentpage-about-minnesota-mobile {
+        display:block;
+        padding:0;
+        margin-bottom:5rem;
+    }
+    .contentpage-about-gigapixel, .contentpage-about-office, .contentpage-about-minnesota {
+        display:none;
+    }
+    .contentpage-about-gigapixel-mobile h3, .contentpage-about-office-mobile h3, .contentpage-about-minnesota-mobile h3 {
+        color: #096bc4;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin-top:5rem;
+    }
+    .contentpage-about-gigapixel-mobile p, .contentpage-about-office-mobile p, .contentpage-about-minnesota-mobile p {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.15rem;
+    }
+    .contentpage-about-gigapixel-button {
+        text-align:center;
+        margin:2.5rem 0 3rem;
+    }
+    .contentpage-about-img {
+        text-align:center;
+    }
+}
+@media screen and (max-width:800px) {
+    .contentpage-reviews-item {
+        max-width:100%;
+    }
+    .contentpage-reviews-image img {
+        max-height:unset;
+    }
+    .contentpage-about-intro p, .contentpage-about-photographers p {
+        max-width:100%;
+        font-size:1.15rem;
+    }
+    .contentpage-about-licensed p, .contentpage-about-quality p, .contentpage-about-work p {
+        max-width:100%;
+    }
+    .contentpage-about-gigapixel-mobile p, .contentpage-about-office-mobile p, .contentpage-about-minnesota-mobile p, .contentpage-about-work {
+        max-width:100%;
+        padding:0 2rem;
+    }
+    .contentpage-about-contactlinks {
+        display:block;
+    }
+    .contentpage-about-contactlink {
+        width:70%;
+        margin:2rem 0 1.5rem;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+//Marketplace page
+.contentpage-marketplace h2 {
+    font-weight:700;
+    color:#000;
+    letter-spacing:-1px;
+    margin-bottom:-1rem;
+}
+.contentpage-marketplace h3 {
+    color:#096bc4;
+    font-weight:700
+}
+.marketplace-product {
+    width:100%;
+    border:3px solid #e5e5e5;
+    margin-bottom:2em;
+}
+.marketplace-product-row {
+    width:100%;
+    display:flex;
+}
+.marketplace-info {
+    flex:1;
+    padding:.5rem;
+    border:1px solid #e5e5e5;
+}
+.marketplace-info h3 {
+    line-height:1em;
+    margin:.5em 0;
+    font-weight:700;
+    font-size:1em;
+    letter-spacing:-.5px;
+    text-align:center;
+    text-transform:uppercase;
+    color:rgba(0,0,0,.5);
+}
+.marketplace-info h4 {
+    line-height:1em;
+    text-align:center;
+    margin:0 0 .25em;
+}
+.marketplace-info p {
+    margin:.5em;
+}
+.marketplace-product-row-img {
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    border-left:1px solid #e5e5e5;
+    border-right:1px solid #e5e5e5;
+}
+.marketplace-img {
+    padding:1em;
+}
+.marketplace-img img {
+    border:1px solid #e5e5e5;
+}
+.contentpage-marketplace-head {
+    max-width:40%;
+    float:right;
+    padding:0 0 2em 2em;
+}
+.contentpage-marketplace-head {
+    max-width:40%;
+    float:right;
+    padding:0 0 2em 2em;
+}
+.contentpage-marketplace-splash {
+    display:flex;
+    margin:2em 0;
+}
+.contentpage-marketplace-splashitem {
+    margin:1em;
+}
+@media screen and (max-width:800px) {
+    .marketplace-product-row {
+        flex-wrap:wrap;
+    }
+    .marketplace-info {
+        min-width:200px
+    }
+    .contentpage-marketplace-head {
+        max-width:60%
+    }
+}
+@media screen and (min-width:601px) {
+    .contentpage-marketplace-head-mobile {
+        display:none;
+    }
+}
+@media screen and (max-width:600px) {
+    .contentpage-marketplace-head {
+        display:none;
+    }
+}
+
+// Holiday 2023
+.mobile-home-splash-holiday {
+    display:none;
+}
+.home-splash-holiday {
+    display:-ms-flexbox;
+    display:flex;
+    margin-top:-40px;
+    margin-bottom:-3rem;
+}
+.home-splash-holiday-first {
+    -ms-flex:1;
+    flex:1;
+    max-width:25%;
+    background:#000;
+    padding:0;
+    max-height:590px;
+}
+.home-splash-holiday-last {
+    max-width:75%;
+    flex:2;
+}
+.holiday-shipping-header {
+    background:#CC0000;
+    margin-top:0;
+    padding:20px;
+    text-align:center;
+}
+.holiday-splash-button {
+    color:#FFF;
+    border:2px solid #FFF;
+    padding:1rem;
+    text-align:center;
+    text-transform:uppercase;
+}
+.holiday-shipping-header h3 {
+    color:#FFF;
+    letter-spacing:-.5px;
+}
+.holiday-splash-college .holiday-splash-subbanner, .holiday-splash-nfl .holiday-splash-subbanner, .holiday-splash-nhl .holiday-splash-subbanner {
+    background:#000;
+    max-width:50%;
+    position:relative;
+    top:134px;
+    float:right;
+    padding:0 20px 20px;
+}
+.holiday-splash-nhl .holiday-splash-subbanner {
+    top:134px;
+}
+.holiday-splash-usskyline .holiday-splash-subbanner {
+    background:#000;
+    max-width:50%;
+    position:relative;
+    top:140px;
+    float:right;
+    padding:0 20px 20px;
+}
+.holiday-splash-college {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/holiday2024-college.jpg') top right;
+    background-size:cover;
+}
+.holiday-splash-nfl {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/holiday2024-nfl.jpg') left top;
+    background-size:cover;
+}
+.holiday-splash-nhl {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/holiday2024-nhl.jpg') left top;
+    background-size:cover;
+}
+.holiday-splash-usskyline {
+    background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/holiday2024-skyline.jpg') left top;
+    background-size:cover;
+}
+@media screen and (max-width:1474px) {
+    .home-splash-holiday {
+        margin-bottom:-2.5rem;
+    }
+    .home-splash-holiday-first {
+        max-height:626px;
+    }
+    .holiday-shipping-body {
+        margin-top:15px;
+    }
+    .holiday-splash-college .holiday-splash-subbanner, .holiday-splash-nfl .holiday-splash-subbanner, .holiday-splash-nhl .holiday-splash-subbanner {
+        top:152px;
+    }
+    .holiday-splash-usskyline .holiday-splash-subbanner {
+        top:158px;
+    }
+}
+@media screen and (max-width:1343px) {
+    .holiday-shipping-body {
+        margin-top:7px;
+    }
+}
+@media screen and (max-width:1302px) {
+    .home-splash-holiday-first {
+        max-width:30%;
+        height:644px;
+        max-height:800px;
+    }
+    .home-splash-holiday-last {
+        max-width:70%;
+    }
+    .holiday-shipping-body {
+        margin-top:16px;
+    }
+    .holiday-splash-college .holiday-splash-subbanner, .holiday-splash-nfl .holiday-splash-subbanner, .holiday-splash-nhl .holiday-splash-subbanner {
+        top:161px;
+    }
+    .holiday-splash-usskyline .holiday-splash-subbanner {
+        top:167px;
+    }
+    .holiday-splash-subbanner  {
+        white-space:nowrap;
+    }
+}
+@media screen and (max-width:1280px) {
+    .holiday-shipping-header {
+        padding:2.25rem 1rem;
+    }
+}
+@media screen and (max-width:1196px) {
+    .home-splash-holiday-first {
+        height:591px;
+    }
+    .holiday-shipping-header {
+        padding:1rem 1.5rem;
+    }
+    .holiday-shipping-body {
+        margin-top:-6px;
+    }
+    .holiday-splash-college .holiday-splash-subbanner, .holiday-splash-nfl .holiday-splash-subbanner, .holiday-splash-nhl .holiday-splash-subbanner {
+        top:134px;
+    }
+    .holiday-splash-usskyline .holiday-splash-subbanner {
+        top:140px;
+    } 
+    .holiday-splash-college-banner {
+        min-width:187px;
+    }
+}
+@media screen and (max-width:1132px) {
+    .home-splash-holiday-first {
+        height:630px;
+    }
+    .holiday-shipping-header {
+        padding:2rem 1rem;
+    }
+    .holiday-shipping-body {
+        margin-top:-3px;
+    }
+    .holiday-splash-college .holiday-splash-subbanner, .holiday-splash-nfl .holiday-splash-subbanner, .holiday-splash-nhl .holiday-splash-subbanner {
+        top:154px;
+    }
+    .holiday-splash-usskyline .holiday-splash-subbanner {
+        top:160px;
+        min-width:176px;
+    } 
+}
+@media screen and (max-width:964px) {
+    .holiday-shipping-header {
+        padding:1.5rem 1rem;
+    }
+    .holiday-shipping-body {
+        margin-top:4px;
+    }
+}
+@media screen and (max-width:950px) {
+    .home-splash-holiday-first {
+        max-width:40%;
+        height:592px;
+    }
+    .home-splash-holiday-last {
+        max-width:60%;
+    }
+    .holiday-shipping-body {
+        margin-top:15px;
+    }
+    .holiday-splash-college .holiday-splash-subbanner, .holiday-splash-nfl .holiday-splash-subbanner, .holiday-splash-nhl .holiday-splash-subbanner {
+        top:0;
+    }
+    .holiday-splash-usskyline .holiday-splash-subbanner {
+        top:0;
+        min-width:176px;
+    }
+    .holiday-splash-button {
+        padding:.5rem;
+    }
+    .holiday-splash-banner {
+        max-height:100%;
+        width:180px;
+    }
+    .holiday-splash-college {
+        background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/2024-college-mobile.jpg') top right;
+        background-size:cover;
+    }
+    .holiday-splash-nfl {
+        background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/2024-nfl-mobile.jpg') right top;
+        background-size:cover;
+    }
+    .holiday-splash-nhl {
+        background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/2024-nhl-mobile.jpg') right top;
+        background-size:cover;
+    }
+    .holiday-splash-usskyline {
+        background:url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/landing/home/2024-skyline-mobile.jpg') right top;
+        background-size:cover;
+    }
+}
+@media screen and (max-width:921px) {
+	.holiday-shipping-body {
+		margin-top:4px;
+	}
+}
+@media screen and (max-width:893px) {
+	.holiday-shipping-body {
+		margin-top:-13px;
+	}
+}
+@media screen and (max-width:800px) {
+    .mobile-home-splash-holiday {
+        display:block;
+        width:100%;
+        text-align:center;
+    }
+    .mobile-holiday-shipping-header {
+        background:#CC0000;
+        margin:0;
+        padding:20px;
+        text-align:center;
+    }
+    .mobile-holiday-shipping-header h2 {
+        color:#fff;
+        font-weight:700;
+        font-style:italic;
+        text-transform:uppercase;
+        line-height:2rem;
+        font-size:2rem;
+        margin-top:5px;
+        margin-bottom:15px;
+    }
+    .mobile-holiday-shipping-header h3 {
+        color:#FFF;
+        letter-spacing:-.5px;
+        text-transform:none !important;
+        margin-top:0;
+        font-size:16px;
+        margin-bottom:0;
+    }
+    .mobile-holiday-shipping-header h4, .mobile-holiday-shipping-header a {
+        margin:.5rem 0 .25rem;
+        color:#fff;
+        font-size:18px;
+        text-transform:uppercase;
+        text-decoration:underline;
+    }
+    .mobile-holiday-shipping-body {
+        background:#000;
+        margin:0 0 2rem;
+        padding:1rem 0;
+    }
+    .mobile-holiday-shipping-body h4 {
+        color:#fff;
+        padding:0;
+        margin:0;
+        font-size:1.5rem;
+        font-weight:700;
+        font-style:italic;
+    }
+    .mobile-holiday-shipping-body hr {
+        padding:0;
+        margin:5px 10%;
+    }
+    .mobile-holiday-shipping-body h5 {
+        color:#fff;
+        margin-top:8px;
+        margin-bottom:0.5rem;
+    }
+}
+// Frame Upgrade Page
+// -----------------------------------------------------------------------------
+.frameup-page-info {
+	max-width:100%;
+	clear:both;
+	text-align:center;
+}
+.frameup-search {
+	max-width:800px;
+	margin:1em auto;
+}
+.frameup-intro {
+	font-size:2em;
+	padding-bottom:1.5em;
+	color:#000;
+	font-weight:500;
+	letter-spacing:-1px;
+}
+.frameup-page-info h1, .frameup-page-info h2 {
+	margin-top:0;
+	font-weight:700;
+	font-size:3rem;
+	letter-spacing:-1px;
+	color:#000;
+}
+.frameup-process {
+	width:100%;
+	clear:both;
+}
+.frameup-process-row {
+	display:flex;
+	margin-bottom:4em;
+	justify-content:center;
+	align-items:center;
+}
+.frameup-process-col {
+	flex:1;
+	text-align:center;
+}
+.frameup-process-col:nth-child(2n) {
+    flex:2;
+}
+.frameup-step-number {
+	border-radius:50%;
+	width:54px;
+	margin:.5em auto -.75em;
+	border:2px solid #096bc4;
+	color:#FFF;
+	text-align:center;
+	font-weight:700;
+	font-size:32px;
+	background:#096bc4;
+}
+.frameup-person {
+	font-weight:700;
+	text-decoration:underline;
+}
+a.frameup-contact {
+	font-weight:700;
+	color:#096bc4;
+}
+.frameup-step-content {
+	font-size:14px;
+}
+.frameup-step-content h3 {
+	font-weight:500;
+	letter-spacing:-1px;
+	color:#000;
+}
+.frameup-notice-outer {
+	clear:both;
+	width:100%;
+}
+.frameup-notice {
+	max-width:60%;
+	margin:4em auto 4em;
+	background:#096BC4;
+	padding:2.25em 2em 1em;
+	color:#fff;
+	font-size:1.25em;
+	font-weight:400;
+	text-align:center;
+	letter-spacing:-.5px;
+}
+.frameup-notice a {
+	color:#fff;
+	font-weight:500;
+	letter-spacing:0;
+}
+.frameup-page .frameup-reviews ul#productReviews-list.productReviews-list li.productReview {
+	width:50%;
+}
+.frameup-page-reviews {
+	text-align:center;
+}
+.frameup-page-reviews h2 {
+	font-size:2em;
+	font-weight:700;
+	letter-spacing:-1px;
+	color:#000;
+	margin-bottom:0;
+}
+.frameup-page-reviews h3 {
+	font-weight:700;
+	color:#000;
+	letter-spacing:-1px;
+	margin:0 auto 3em;
+}
+.frameup-page-reviews a {
+	color:#096bc4;
+}
+@media screen and (max-width:1000px) {
+	.frameup-intro {
+		font-size:1.65em;
+	}
+	.frameup-step-content {
+		font-size:1em;
+	}
+	.frameup-process-row {
+		display:block;
+		margin-bottom:8em;
+	}
+}
+@media screen and (max-width:800px) {
+	.frameup-page-info h1, .frameup-page-info h2 {
+		font-size:2em;
+	}	
+	.frameup-intro {
+		font-size:1.25em;
+	}
+	.frameup-process-row {
+		margin-bottom:4em;
+	}
+	.frameup-notice {
+		max-width:100%;
+		padding: 1.25em 1em .1em;
+	}
+}
+@media screen and (max-width:670px) {
+	.frameup-reviews ul#productReviews-list.productReviews-list li.productReview, .frameup-page .frameup-reviews ul#productReviews-list.productReviews-list li.productReview, .productReview {
+		width:100%;
+		max-width:100%;
+		padding-right:2em;
+	}
+}
+.frameup-page-intro {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    text-align:center;
+}
+.frameup-page-info {
+    width:70%;
+    display:inline-block;
+}
+.frameup-page-new {
+    width:200px;
+    display:inline-block;
+    margin-bottom:3em;
+}
+.frameup-page-ending {
+	display:inline-block;
+	width:100%;
+    text-align:center;
+}
+.frameup-page-ending h2 {
+    font-weight:700;
+    color:#000;
+    letter-spacing:-1px;
+    font-size:3em;
+}
+@media screen and (max-width:1350px) {
+    .frameup-page-intro {
+        display:flex;
+    }
+    .frameup-page-info {
+        flex:3;
+    }
+    .frameup-page-new {
+        flex:1;
+    }
+    .frameup-page-new img {
+        max-width:250px;
+    }
+}
+@media screen and (max-width:1230px) {
+    .frameup-page-intro {
+        display:flex;
+    }
+    .frameup-page-info {
+        flex:4;
+    }
+    .frameup-page-new {
+        flex:1;
+    }
+    .frameup-page-new img {
+        max-width:200px;
+    }   
+}
+@media screen and (max-width:550px) {
+    .frameup-page-intro {
+        display:block;
+    }
+}
+
+// Careers page
+.contentpage-careers {
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.contentpage-careers-intro {
+    display:flex;
+    min-height:300px;
+    background:#096bc4;
+}
+.careers-intro-left {
+    width:50%;
+    padding:3em 2em 2em 2em;
+    color:#FFF;
+    font-size:1.25em;
+}
+.careers-intro-right {
+    float:right;
+    width: 50%;
+    background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/about-us/bg-location.jpg') no-repeat left;
+    background-size: cover;
+}
+.contentpage-careers-section h2 {
+   color:#000;
+    font-weight:500;
+    letter-spacing:-1px;
+    text-transform:uppercase;
+}
+.contentpage-careers-section h3 {
+    font-weight:700;
+    letter-spacing:-1px;
+    color:#000;
+}
+.contentpage-careers-section h4 {
+    font-weight:700;
+    letter-spacing:-1px;
+    color:#114d93;
+}
+.contentpage-careers-section a {
+    background:#096bc4;
+    padding:1em;
+    color:#FFF;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+.contentpage-careers-button {
+   /* margin:2em 0 3em;*/
+}
+.contentpage-careers-job {
+    display:flex;
+}
+.contentpage-careers-job-left {
+    width:50%;
+}
+.contentpage-careers-job-right {
+    width:50%;
+    text-align:right;
+}
+.contentpage-careers-job-left h4 {
+    margin:0;
+}
+.contentpage-careers-job-left p {
+    margin:0;
+}
+.contentpage-careers-job-right {
+    padding-top:1em;
+}
+@media screen and (max-width:850px) {
+   .contentpage-careers-intro {
+       display:block;
+   } 
+    .careers-intro-left {
+        width:100%;
+        font-size:1em;
+        padding:2em 2em 5px;
+    }
+    .careers-intro-right {
+        width:100%;
+        float:none;
+        min-height:250px;
+        background: url('https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/about-us/bg-location.jpg') no-repeat left 70%;
+        background-size:cover;
+    }
+    .contentpage-careers-job {
+        display:block;
+        width:100%;
+    }
+    .contentpage-careers-job-left {
+        width:100%;
+    }
+    .contentpage-careers-job-right {
+        width:100%;
+        text-align:left;
+        margin:1em 0 3em;
+    }
+}
+.contentpage-about-careers {
+    text-align:center;
+    margin-bottom:2em;
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+    background:#e5e5e5;
+    padding:2em 2em 3.5em;
+}
+.contentpage-about-careers h4 {
+    font-weight: 900;
+    color:#000;
+    letter-spacing:-2px;
+    text-transform:uppercase;
+    font-size:2.5em;
+    margin:0 auto .5em;
+}
+.contentpage-about-careers a {
+    background:#096bc4;
+    padding:1em;
+    color:#FFF;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-size:1em;
+}
+.category-emotive {
+    display:none;
 }
