@@ -10,7 +10,7 @@
 }
 
 .dropdown-menu {
-    z-index: $zIndex-lowest;
+    z-index:100;
 
     &.is-loading .loadingOverlay {
         background: none;
@@ -124,16 +124,22 @@
     }
 
     [data-wishlist] {
-        border-top: 0;
+        border-top: none;
         margin-bottom: 0;
         width: 100%;
     }
 
     .button {
-        background-color: stencilColor("dropdown--wishList-backgroundColor");
+        background-color:#c7c7c7;
+        border-left:1px solid #c7c7c7;
+        color:#666;
+        font-weight:500;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         width: 100%;
+        text-transform:uppercase;
+        text-align:center;
+        font-size:12px;
     }
 
     .button--has-items {
@@ -141,9 +147,9 @@
     }
 
     li:not(:last-child) .button {
-        border-bottom: 0;
+        border-bottom: none;
         border-radius: 0;
-        border-top: 0;
+        border-top: none;
         margin-bottom: 0;
     }
 }
