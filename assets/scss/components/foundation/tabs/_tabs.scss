@@ -97,3 +97,33 @@
         border-top: 0;
     }
 }
+.tabs-contents {
+	margin-bottom:2.5rem;
+}
+.tabs-mobile {
+	margin-top:-3.5rem;
+	padding-bottom:1rem;
+}
+.tab-title-mobile {
+	color:#000;
+	font-weight:700;
+	letter-spacing:-.5px;
+	margin-bottom:2.5rem;
+}
+#tab-details-mobile {
+	margin-top:-1.5rem;
+}
+#tab-details-mobile h3 {
+	color:#096bc4;
+	font-weight:500;
+	letter-spacing:-.5px;
+	margin-top:-.25rem;
+}
+#tab-details-mobile hr {
+	margin-left:auto;
+	margin-right:auto;
+	max-width:50%;
+}
+div#tab-description-mobile.tab-content-mobile {
+	margin-top:-1.5rem;
+}
