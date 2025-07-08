@@ -11,10 +11,16 @@
     .product-brand {
         color: color("greys", "light");
         margin: 0;
+	  display:none;
     }
 
     .product-title {
-        margin-top: 0;
+        margin-top: 1rem;
+        font-weight:500;
+        text-transform:none;
+        letter-spacing:-.5px;
+        font-size:1rem;
+        color:#000;
     }
 }
 
@@ -38,4 +44,9 @@
         height: 100%;
         object-fit: contain;
     }
+}
+#modal-review-form.modal.open div.modal-content div.modal-body form.form.writeReview-form fieldset.form-fieldset div.form-field.form-field--submit input.button.button--primary {
+	text-transform:uppercase;
+	font-weight:500;
+	padding-top:17px;
 }
