@@ -1,5 +1,4 @@
 .brand-image-container {
-
     @include lazy-loaded-padding("thumb_size");
     max-width: get-width(stencilString("thumb_size"));
     position: relative;
