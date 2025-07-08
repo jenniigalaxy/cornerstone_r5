@@ -4,8 +4,6 @@ brands:
 
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
 <main class="page">
     <h1 class="page-heading">{{lang 'brand.label'}}</h1>
     {{{region name="brands_below_header"}}}
@@ -38,5 +36,6 @@ brands:
     {{> components/common/paginator pagination.brands}}
     {{{region name="brands_below_content"}}}
 </main>
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 {{/partial}}
 {{> layout/base}}
