@@ -31,23 +31,22 @@
 .modal-header {
     padding-left: $reveal-modal-paddingHorizontal;
     padding-right: remCalc($reveal-close-height) + $reveal-close-side;
+    border-bottom:2px solid #e5e5e5;
 }
 
 .modal-header-title {
-    font-size: fontSize("large");
+    font-size: 28px;
     text-align: center;
-
-    @include breakpoint("medium") {
-        font-size: fontSize("larger");
-    }
+    font-weight: 500;
+    color: #000;
+    letter-spacing: -1px;
 }
 
 .modal-close {
     @include square($reveal-close-height);
-
     @include addFocusTooltip;
     color: stencilColor("icon-color");
-    font-size: 26px;
+    font-size: 38px;
     line-height: remCalc($reveal-close-height);
     padding: 0;
     position: absolute;
@@ -56,7 +55,7 @@
     z-index: zIndex("high");
 
     @include breakpoint("medium") {
-        font-size: 32px;
+        font-size: 38px;
     }
 
     &:hover {
@@ -73,7 +72,9 @@
         transform: translateX(remCalc(10px));
     }
 }
-
+button.modal-close::before, button.modal-close::after {
+	display:none !important;
+}
 .modal-body {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -217,4 +218,7 @@
         opacity: 1;
         transform: scale(1);
     }
+}
+div.modal-body div.previewCart section.productView div.productView-details {
+    width:100% !important;
 }
