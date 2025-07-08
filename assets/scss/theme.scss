@@ -28,17 +28,12 @@
 // -----------------------------------------------------------------------------
 
 @import "settings/global/global"; // 1
-
 @import "../../node_modules/@bigcommerce/citadel/dist/settings/global/global"; // 2
-
 @import "settings/global/tools"; // 5
-
 @import "../../node_modules/@bigcommerce/citadel/dist/settings/normalize/normalize"; // 2
 @import "../../node_modules/@bigcommerce/citadel/dist/settings/foundation/foundation"; // 2
 @import "../../node_modules/@bigcommerce/citadel/dist/settings/bigcommerce/bigcommerce"; // 2
-
 @import "../../node_modules/@bigcommerce/citadel/dist/vendor/foundation/foundation"; // 6
-
 @import "settings/normalize/normalize"; // 4
 @import "settings/vendor/vendor"; // 4
 @import "settings/foundation/foundation"; // 4
