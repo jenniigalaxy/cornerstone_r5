@@ -9,7 +9,7 @@
 $toggle-spacing: spacing("single") + spacing("half");
 
 .toggle {
-    border-top: container("border");
+    border-top: 2px solid #e5e5e5;
     margin-bottom: $toggle-spacing;
 
     &:last-of-type {
