@@ -10,7 +10,9 @@
     appearance: none;
     background-image: $select-backgroundImage;
     background-position: $select-backgroundPosition;
-    border-radius: $select-borderRadius;
+    border-radius:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
     padding: $select-padding;
 
     &:hover {
@@ -23,6 +25,7 @@
 // -----------------------------------------------------------------------------
 
 .form-label {
+    color:#000;
     small {
         float: $opposite-direction;
         margin-top: $form-label-small-marginTop;
@@ -35,11 +38,75 @@
 
 .form-label--inlineSmall {
     small {
-        color: stencilColor("color-textSecondary");
+        color:#000;
         float: none;
         font-size: inherit;
         font-weight: fontWeight("normal");
         margin-left: spacing("quarter");
         text-transform: none;
     }
+}
+
+// Custom additions
+// -----------------------------------------------------------------------------
+.form-checkbox + .form-label::before, .form-radio + .form-label::before {
+    background-color:#FFF;
+    border: solid #a6a6a6;
+    border-width:2px;
+    height:1rem;
+    width:1rem;
+    left:0;
+    top:0;
+}
+.form-radio + .form-label::after {
+    background:#a6a6a6;
+    border:3px solid #a6a6a6;
+    border-radius:0.875rem;
+}
+.form-increment .button {
+    border-radius:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border:2px solid #c7c7c7;
+    color:#e5e5e5;
+}
+.form-input--incrementTotal {
+    color:#000;
+}
+.form-label--alternate {
+    color:#000;
+    font-size:14px;
+    text-transform:uppercase;
+    font-weight:500;
+}
+.form-input {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-color:#FFF;
+    border:2px solid #c7c7c7;
+    border-radius:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    color:#000;
+    display:block;
+    font-family:inherit;
+    font-size:1rem;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    height:3rem;
+    margin:0;
+    padding:0.75rem 1rem;
+    transition:border-color 100ms ease-out;
+    width:100%;
+}
+.form-select#shipping-country, .form-select#shipping-state {
+    border:2px solid #c7c7c7;
+    color:#000;
+    padding-left:8px;
+}
+input.button.button--primary.form-prefixPostfix-button--postfix {
+    background:#000;
+    border:1px solid #000;
 }
