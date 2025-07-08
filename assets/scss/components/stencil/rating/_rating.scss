@@ -4,13 +4,13 @@
 
 .icon--ratingEmpty {
     svg {
-        fill: stencilColor("icon-ratingEmpty");
+        fill: #E5E5E5 !important;
     }
 }
 
 .icon--ratingFull {
     svg {
-        fill: stencilColor("icon-ratingFull");
+        fill: #096bc4;
     }
 }
 
