@@ -114,7 +114,7 @@
             </p>
         {{/and}}
         {{#if brand.name}}
-            <p class="card-text" data-test-info-type="brandName">{{brand.name}}</p>
+            <p class="card-text card-text-brandname" data-test-info-type="brandName">{{brand.name}}</p>
         {{/if}}
         <h3 class="card-title">
             <a aria-label="{{> components/products/product-info}}"
@@ -125,7 +125,7 @@
             </a>
         </h3>
 
-        <div class="card-text" data-test-info-type="price">
+        <div class="card-text card-text-price" data-test-info-type="price">
             {{#or customer (unless settings.hide_price_from_guests)}}
                 {{> components/products/price price=price}}
             {{else}}
