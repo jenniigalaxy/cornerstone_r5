@@ -6,8 +6,15 @@
 .actionBar-section {
     .form-field {
         background-color: $input-bg-color;
-        border: $actionBar-form-field-border;
-        border-radius: $actionBar-form-field-radius;
+        border: 2px solid #e5e5e5;
+        border-radius: 0;
+        -webkit-border-radius:0;
+        -moz-border-radius:0;
+        font-weight:500;
+        text-transform:uppercase;
+        overflow: hidden;
+        color:#666;
+	  margin-bottom:0.5rem;
 
         &:hover {
             border-color: stencilColor("input-border-color-active");
