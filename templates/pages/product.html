@@ -13,8 +13,6 @@ product:
 
 {{#partial "page"}}
 
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
     {{#each product.shipping_messages}}
         {{> components/common/alert/alert-info message}}
     {{/each}}
@@ -36,5 +34,7 @@ product:
     </div>
 
     {{> components/products/schema}}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 {{/partial}}
 {{> layout/base}}
+<script src=https://widget.sezzle.com/v1/javascript/price-widget?uuid=d44b557e-d238-44d9-8f5f-cc04c3413d07></script>
