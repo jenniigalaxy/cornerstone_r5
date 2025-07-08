@@ -25,9 +25,11 @@
     }'
 >
     {{#each products}}
+    {{#if id '!=' '12142'}}
     <div data-product-slide class="productCarousel-slide">
         {{> components/products/card settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
     </div>
+    {{/if}}
     {{/each}}
     {{#if products.length '>' 1}}
         {{> components/carousel-content-announcement}}
