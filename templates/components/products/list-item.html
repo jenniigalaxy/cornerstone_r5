@@ -83,6 +83,13 @@
                 {{/if}}
             </div>
             <div class="listItem-actions">
+		<!-- SKU addition -->
+                        <div class="listItem-sku">SKU: 
+                            <span class="sku-inner">
+                                {{sku}}
+                            </span>
+                        </div>
+			<!-- End SKU addition -->
                 {{#or customer (unless settings.hide_price_from_guests)}}
                     {{#if price}}
                         <div class="listItem-price">{{> components/products/price price=price}}</div>
