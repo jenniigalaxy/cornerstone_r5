@@ -5,6 +5,9 @@
 .button {
     line-height: 1rem;
     transition: all 0.15s ease;
+    border-radius:0 !important;
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
 
     + .button {
         margin-left: 0;
@@ -21,6 +24,6 @@
 
 .button--icon {
     svg {
-        fill: stencilColor("button--icon-svg-color");
+        fill: #a6a6a6;
     }
 }
