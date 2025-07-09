@@ -37,7 +37,7 @@
     padding-right: spacing("base");
 
     @include breakpoint("medium") {
-        width: grid-calc(6, $total-columns);
+        width: grid-calc(9, $total-columns);
     }
 }
 
@@ -49,7 +49,7 @@
     @include breakpoint("medium") {
         clear: right;
         float: right;
-        width: grid-calc(6, $total-columns);
+        width: grid-calc(3, $total-columns);
     }
 
     .productView--quickView & {
@@ -82,4 +82,54 @@
             width: 100%;
         }
     }
+}
+#attribute_textarea_12294 {
+    height:150px;
+}
+.oilers-notice {
+  border:10px solid #096bc4;
+  color:#096bc4;
+  padding:.5em;
+  margin-bottom:2em;
+  text-align:center;
+  font-size:1.5em;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+div .oilers-button {
+  background:#000;
+  max-width:300px;
+  margin: .35em auto .25em;
+  color:#FFF;
+  text-transform:uppercase;
+  border:none;
+  text-decoration:none !important;
+  font-size:1.25em;
+}
+.oilers-button a {
+  text-decoration:none !important;
+}
+.oilers-link {
+  text-decoration:none;
+}
+.productView-edd {
+  margin:.75em 0 -2em;
+  text-transform:uppercase;
+  font-weight:500;
+  font-size:14px;
+}
+@media screen and (max-width:800px) {
+  .productView-edd {
+    margin:-.5em 0 -1em;
+    color:#096bc4;
+  }
+}
+.panorama-title-txam7 img {
+    max-width:90%;
+}
+.alert-psu13 {
+    font-weight: bold;
+    color: #096bc4;
+    letter-spacing: -.5px;
+    margin-bottom: 1em;
 }
