@@ -1,93 +1,153 @@
 {{#if banners.bottom}}
-    <div class="banners" data-banner-location="bottom">
-        {{#each (limit banners.bottom_metadata 1)}}
-            <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-name="{{this.banner-name}}">
-                <div data-event-type="promotion-click">
-                    {{{this.content}}}
+    {{#if settings.data_tag_enabled}}
+        <div class="banners" data-banner-location="bottom">
+            {{#each (limit banners.bottom_metadata 1)}}
+                <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-name="{{this.banner-name}}">
+                    <div data-event-type="promotion-click">
+                        {{{this.content}}}
+                    </div>
                 </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <div class="banners" data-banner-location="bottom">
+            <div class="banner">
+                {{{limit banners.bottom 1}}}
             </div>
-        {{/each}}
-    </div>
+        </div>
+    {{/if}}
+
 {{/if}}
-<footer class="footer" role="contentinfo">
-    <h2 class="footer-title-sr-only">{{lang 'footer.title'}}</h2>
-    <div class="container">
-        {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
-            <article class="footer-info-col
-                footer-info-col--social
-                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
-                data-section-type="footer-webPages">
-                    <h3 class="footer-info-heading">{{lang 'social.connect'}}</h3>
-                    {{> components/common/social-links}}
-            </article>
-        {{/if}}
-        <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h3 class="footer-info-heading">{{lang 'footer.navigate'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each pages}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li>
-                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
-                    </li>
-                </ul>
-            </article>
+<footer class="footer" roler="contentinfo">
+	<div class="container">
+		<section class="footer-info">
+			<section class="footer-start">
+				<article class="footer-info-col footer-info-col--fanclub" data-section-type="footer-webPages">
+				    <iframe src="https://emotivecdn.io/embedded/index.html?id=e78c04e4-6731-11ef-b6a1-0a58a9feac02&brand_id=14319&api=https%3A%2F%2Fwww.emotiveapp.co" style="width:100%;height:420px;border:none;box-sizing:border-box;"></iframe>
+					<!--<h3 class="footer-info-heading footer-info-fanclub">Join our Fan Club</h3>
+						<p>Join the Blakeway Fan Club for a 15% off coupon, plus promos and new product alerts on your favorite team or travel destination.</p>
+						<!-- Begin Mailchimp Signup Form -->
+						<!--<div id="mc_embed_signup">
+							<form action="https://panoramas.us12.list-manage.com/subscribe/post?u=a7eb16435ae4800904d4b0b8e&amp;id=f7274f448c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll">
+									<div class="mc-field-group">
+										<input type="email" value="Email Address" name="EMAIL" class="required email" id="mce-EMAIL">
+									</div>
+									<div class="mc-field-group">
+										<input type="text" value="Favorite Team(s)/Interests" name="MMERGE1" class="" id="mce-MMERGE1">
+									</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>    
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+									<!--<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7eb16435ae4800904d4b0b8e_f7274f448c" tabindex="-1" value=""></div>
+									<div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+								</div>
+							</form>
+						</div>
+						<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='MMERGE1';ftypes[1]='text';fnames[2]='SIGNUP';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+						<!--End mc_embed_signup-->
+						<!--<p class="fanclub-terms">Discount code good for single use (1 time) per customer only. Some exceptions may apply (for example, if trying to apply multiple discounts to your cart). Signing up to join our email club does not register you for an account on this site. All customer information is confidential and is used only by us for promotional or product announcements that you indicated interest in when joining our fan club. We do not share or sell our customer lists.</p>-->
+				</article>
+			</section>
+			
+			<section class="footer-end">
+				<section class="footer-nav">
+					<article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+						<h5 class="footer-info-heading">Information</h5>
+						<ul class="footer-info-list">
+							<li>
+								<a href="{{base}}/account.php?action=account_details" title="My Account">My Account</a>
+							</li>
+							<li>
+								<a href="{{base}}/about-us" title="About Blakeway">About Us</a>
+							</li>
+							<li>
+							    <a href="{{base}}/careers" title="Careers">Careers</a>
+							</li>
+							<li>
+								<a href="{{base}}/new-products" title="New Products">New Products</a>
+							</li>
+							<!--<li>
+								<!--<a href="{{base}}/fan-club" title="Blakeway Fan Club">Blakeway Fan Club</a>
+							</li>-->
+							<li>
+								<a href="http://blakewaygigapixel.com/" target="_blank" title="Blakeway Gigapixel">Blakeway Gigapixel</a>
+							</li>
+							
+						</ul>
+					</article>
 
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h3 class="footer-info-heading">{{lang 'footer.categories'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </article>
+					<article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+						<h5 class="footer-info-heading">Customer Service</h5>
+						<ul class="footer-info-list">
+							<li>
+								<a href="{{base}}/contact-us" title="Contact Us">Contact Us</a>
+							</li>
+							<li>
+								<a href="{{base}}/faq" title="FAQ">FAQ</a>
+							</li>
+							<li>
+								<a href="{{base}}/shipping-delivery" title="Shipping & Delivery">Shipping &amp; Delivery</a>
+							</li>
+							<li>
+								<a href="{{base}}/customer-reviews" title="Customer Reviews">Customer Reviews</a>
+							</li>
+							<li>
+								<a href="{{base}}/coupon-codes" title="Coupons / Promo Codes">Coupons / Promo Codes</a>
+							</li>
+						</ul>
+					</article>
+				</section>
 
-            {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
-                <h3 class="footer-info-heading">{{lang 'footer.brands'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each shop_by_brand}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
-            </article>
-            {{/and}}
+				<article class="footer-info-col footer-info-col--small footer-company-info" data-section-type="storeInfo">
+					<article itemscope="" itemtype="http://schema.org/LocalBusiness">
+						<div class="footer-logo-image">
+							<img class="footer-logo-image" src="https://cdn11.bigcommerce.com/s-xexc16uo8q/content/assets/blakeway-panoramas-logo_white.png" alt="Blakeway Panoramas" title="Blakeway Panoramas">
+						</div>
+						<div class="footer-company">
+							<span itemprop="name" class="footer-company-name">Blakeway Panoramas</span>
+							<div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="footer-address">
+								<span itemprop="streetAddress">5451 Smetana Drive</span> 
+								<span itemprop="addressLocality">Minnetonka</span>, 
+								<span itemprop="addressRegion">MN</span> 
+								<span itemprop="postalCode">55343</span> 
+								<span itemprop="addressCountry">USA</span>
+							</div>
+							Phone: <span itemprop="telephone"><a href="tel:18003347266" class="footer-phone">1-800-334-7266</a></span>
+							or <span itemprop="telephone"><a href="tel:19529419797" class="footer-phone">952-941-9797</a></span>
+						</div>
+					</article>
+				</article>
 
-            {{#if settings.address}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h3 class="footer-info-heading">{{lang 'footer.info'}}</h3>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
-            {{/if}}
-
-            <article class="footer-info-col" data-section-type="newsletterSubscription">
-                {{#if settings.show_newsletter_box}}
-                    {{> components/common/subscription-form}}
-                {{/if}}
-                {{> components/common/payment-icons}}
-            </article>
-        </section>
-        {{#if theme_settings.show_powered_by}}
-            <div class="footer-copyright">
-                <p class="powered-by">{{lang 'footer.powered_by'}} <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
-            </div>
-        {{/if}}
-        {{#if theme_settings.show_copyright_footer}}
-            <div class="footer-copyright">
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
-            </div>
-        {{/if}}
-    </div>
-    {{{region name="ssl_site_seal--global"}}}
+				<article class="footer-info-col footer-icons">
+					<div class="footer-payment">
+					<ul class="payment-icons">
+						<li class="payment-icons"><svg><use href="#icon-cc-visa-brands" /></svg></li>
+						<li class="payment-icons"><svg><use href="#icon-cc-mastercard-brands" /></svg></li>
+						<li class="payment-icons"><svg><use href="#icon-cc-discover-brands" /></svg></li>
+						<li class="payment-icons"><svg><use href="#icon-cc-amex-brands" /></svg></li>
+						<li class="payment-icons"><svg><use href="#icon-cc-apple-pay-brands" /></svg></li>
+						<li class="payment-icons"><svg><use href="#icon-cc-amazon-pay-brands" /></li>
+					</ul>
+					</div>
+					<div class="footer-social">
+					<ul class="social-icons" itemscope itemtype="http://schema.org/LocalBusiness">
+						<link itemprop="url" href="https://www.panoramas.com">
+						<li class="social-icons"><a itemprop="sameas" href="https://www.facebook.com/blakewayworldwide" target="_blank" title="Follow us on Facebook"><svg><use href="#icon-facebook-square-brands" /></svg></a></li>
+						<li class="social-icons"><a itemprop="sameas" href="https://twitter.com/panoramascom" target="_blank" title="Follow us on Twitter"><svg><use href="#icon-twitter-square-brands" /></svg></a></li>
+						<li class="social-icons"><a itemprop="sameas" href="http://www.pinterest.com/panoramascom/" target="_blank" title="Follow us on Pinterest"><svg><use href="#icon-pinterest-square-brands" /></svg></a></li>
+						<li class="social-icons"><a itemprop="sameas" href="http://www.instagram.com/blakeway_panoramas/" target="_blank" title="Follow us on Instagram"><svg><use href="#icon-instagram-square-brands" /></svg></a></li>
+						<li class="social-icons"><a itemprop="sameas" href="http://www.linkedin.com/company/blakeway-worldwide-panoramas-inc." target="_blank" title="Follow us on LinkedIn"><svg><use href="#icon-linkedin-brands" /></svg></a></li>
+					</ul>
+					</div>
+				</article>
+				
+				<article class="footer-info-col footer-copyright">
+					<p class="powered-by">&copy; {{moment format="YYYY"}} Blakeway Panoramas. All Rights Reserved. | <a href="{{base}}/privacy-policy" title="Privacy Policy">Privacy Policy</a> | <a href="{{base}}/terms-conditions" title="Terms & Conditions">Terms &amp; Conditions</a> | <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a></p>
+				</article>
+			</section>
+		</section>
+	</div>
 </footer>
