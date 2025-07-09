@@ -1,5 +1,4 @@
-<a href="#main-content" class="skip-to-main-link">{{lang 'header.skip_to_main'}}</a>
-{{#if banners.top}}
+<!--{{#if banners.top}}
 <div class="banners" data-banner-location="top">
     {{#each (limit banners.top_metadata 1)}}
     <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
@@ -9,26 +8,56 @@
     </div>
     {{/each}}
 </div>
-{{/if}}
+{{/if}}-->
+<!--<div class="banners-elite" data-banner-location="top" style="cursor:pointer;" onclick="window.location='https://www.panoramas.com/faq#promo-freeship'">
+    <div class="promo-banner-elite">
+        <p class="promo-main-elite">
+            <a href="https://www.panoramas.com/faq#promo-freeship"><span class="promo-important-elite">FREE GROUND SHIPPING!</span></a> <a class="promo-details-elite" href="https://www.panoramas.com/faq#promo-freeship">Details</a>
+		</p>
+    </div>
+</div>-->
+<div class="banners" data-banner-location="top" style="cursor:pointer;" onclick="window.location='https://www.panoramas.com/fan-club'">
+    <div class="promo-banner">
+        <p class="promo-main">
+            <a href="https://www.panoramas.com/fan-club">Get <span class="promo-important"> 15% Off</span> when you join our fan club.</a> <a class="promo-details" href="https://www.panoramas.com/fan-club">Details</a>
+		</p>
+    </div>
+</div>
 <header class="header" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
     </a>
     {{> components/common/navigation}}
 
-    {{#if page_type '===' 'default'}}
-        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+    <div class="container logo-container">
+        <h1 class="header-logo header-logo--left">
             {{> components/common/store-logo}}
         </h1>
-    {{else}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </div>
-    {{/if}}
+        <div class="searchBox">
+	<form class="form" onsubmit="return false" data-url="{{urls.search}}" data-quick-search-form>
+		<fieldset class="form-fieldset">
+			<div class="form-field">
+				<label class="form-label is-srOnly" for="search_query_adv">{{land 'search.results.form_labe'}}</label>
+				<div class="form-prefixPostfix">
+					<input class="form-input" id="search_query_adv" name="search_query_adv" value="{{forms.search.query}}">
+					<input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value=""><svg><use href="#icon-magnifying-glass-solid" /></svg>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+	<section class="quickSearchResults" data-bind="html: results"></section>
+	<p role="status" 
+	   aria-live="polite" 
+	   class="aria-description--hidden" 
+	   data-search-aria-message-predefined-text="{{{land 'search.results.quick_count_live'}}}"></p>
+</div>
+    </div>
+    
+    
+    {{{region name="header_bottom"}}}
     <div class="navPages-container" id="menu" data-menu>
         {{> components/common/navigation-menu}}
     </div>
-    {{{region name="header_navigation_bottom--global"}}}
 </header>
 {{{region name="header_bottom--global"}}}
 {{{region name="header_bottom"}}}
