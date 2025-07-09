@@ -16,7 +16,6 @@ product_results:
 
 {{#partial "page"}}
 {{{ stylesheet '/assets/scss/vendor/jstree/style.css' }}}
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 <section class="nav">
     {{#if forms.search.query}}
         <div id="search-results-heading">
@@ -66,7 +65,7 @@ product_results:
     <main class="page-content">
         {{#if forms.search.has_suggestions}}
             <div class="panel panel--large">
-                <div class="panel-body">
+                <div class="panel-body searchbody">
                     {{#if forms.search.suggested_query}}
                         <div class="search-suggestion">
                             {{lang 'forms.search.did_you_mean'}} <strong>{{forms.search.suggested_query.query}}</strong>
@@ -138,6 +137,6 @@ product_results:
         {{{region name="search_below_content"}}}
     </main>
 </section>
-
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 {{/partial}}
 {{> layout/base}}
