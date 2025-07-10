@@ -1,0 +1,88 @@
+<ul class="tabs" data-tab>
+    <li class="tab is-active">
+        <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
+    </li>
+    <li class="tab">
+        <a class="tab-title" href="#tab-details">Print/Frame Details</a>
+    </li>
+    {{#if product.warranty}}
+        <li class="tab {{#unless product.description}}is-active{{/unless}}">
+            <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
+        </li>
+    {{/if}}
+    {{#all product.custom_fields theme_settings.show_custom_fields_tabs}}
+        <li class="tab">
+            <a class="tab-title"
+               href="#tab-{{dashcase (lowercase (sanitize theme_settings.pdp-custom-fields-tab-label))}}"
+            >
+                {{sanitize theme_settings.pdp-custom-fields-tab-label}}
+            </a>
+        </li>
+    {{/all}}
+    {{#all settings.show_product_reviews theme_settings.show_product_reviews product.reviews.total}}
+        <li class="tab" id="tab-reviews">
+            <a class="tab-title productView-reviewTabLink" href="#tab-reviews">{{lang 'products.reviews.header' total=product.reviews.total}}</a>
+        </li>
+    {{/all}}
+</ul>
+<div class="tabs-contents">
+    <div class="tab-content is-active" id="tab-description">
+        {{{product.description}}}
+    </div>
+    <div class="tab-content" id="tab-details">
+        <h3>The Print</h3>
+        <p>Our panoramic prints begin as a high definition photo that is printed on heavy art stock paper to resist waviness and warping due to heat and humidity.  The print is then topped with a UV resistant coating to minimize fading. The prints are available as an unframed poster or professionally framed in 3 different frame styles. Our panoramic posters measure 40" wide x 13.5" tall, which is typically not a stocked frame size, so you may want to consider purchasing it framed from us to avoid the time and expense of custom framing.</p>
+        <hr>
+        <h3>Professionally Framed</h3>
+        <p>Framing not only extends the life of your print, it showcases your passion for all to see. If you compare our prices with those of a custom frame shop, you'll find we are very competitive and often times lower as we buy our frame materials in bulk and pass that savings on to you. When framing we consider that the product will have to endure the rigors of shipping and use only high quality moulding and tempered glass, which doesn’t scratch or have large jagged edges when broken.</p>
+        <hr>
+        <h3>Frame Details</h3>
+        <ul>
+            <li><strong>Standard Frame - 40 1/4" wide x 13 3/4" tall:</strong> The frame moulding is a rounded glossy black 3/8" aluminum. Ready-to-hang with attached picture wire.</li>
+            <li><strong>Select Frame - 41 1/2" wide x 15" tall:</strong> The print has a mat in the team's primary color (if applicable). The frame moulding is a 1 1/8" wide flat profile aluminum. Ready-to-hang with attached picture wire. </li>
+            <li><strong>Deluxe Frame - 44" wide x 18" tall:</strong> The print has a border in the team's secondary color (if applicable), and a bevel-cut mat in the team's primary color (if applicable). The frame moulding is a 1 1/8" wide contoured aluminum. Ready-to-hang with attached picture wire.</li>
+        </ul>
+	</div>
+        
+    {{#if product.warranty}}
+        <div class="tab-content {{#unless product.description}}is-active{{/unless}}" id="tab-warranty">
+            {{{product.warranty}}}
+        </div>
+    {{/if}}
+    {{#all product.custom_fields theme_settings.show_custom_fields_tabs}}
+      <div class="tab-content" id="tab-{{dashcase (lowercase (sanitize theme_settings.pdp-custom-fields-tab-label))}}">
+         <dl class="productView-info">
+            {{> components/products/custom-fields }}
+         </dl>
+      </div>
+    {{/all}}
+       <div class="tab-content" id="tab-reviews">
+           {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+       </div>
+</div>
+
+<div class="tabs-mobile">
+	<div class="tab-mobile">
+		<h3 class="tab-title-mobile">Description</h3>
+		<div class="tab-content-mobile" id="tab-description-mobile">
+			{{{product.description}}}
+		</div>
+	</div>
+	<div class="tab-mobile">
+		<h3 class="tab-title-mobile">Print/Frame Details</h3>
+		<div class="tab-content-mobile" id="tab-details-mobile">
+			<h3>The Print</h3>
+			<p>Our panoramic prints begin as a high definition photo that is printed on heavy art stock paper to resist waviness and warping due to heat and humidity.  The print is then topped with a UV resistant coating to minimize fading. The prints are available as an unframed poster or professionally framed in 3 different frame styles. Our panoramic posters measure 40" wide x 13.5" tall, which is typically not a stocked frame size, so you may want to consider purchasing it framed from us to avoid the time and expense of custom framing.</p>
+			<hr>
+			<h3>Professionally Framed</h3>
+			<p>Framing not only extends the life of your print, it showcases your passion for all to see. If you compare our prices with those of a custom frame shop, you'll find we are very competitive and often times lower as we buy our frame materials in bulk and pass that savings on to you. When framing we consider that the product will have to endure the rigors of shipping and use only high quality moulding and tempered glass, which doesn’t scratch or have large jagged edges when broken.</p>
+			<hr>
+			<h3>Frame Details</h3>
+			<ul>
+				<li><strong>Standard Frame - 40 1/4" wide x 13 3/4" tall:</strong> The frame moulding is a rounded glossy black 3/8" aluminum. Ready-to-hang with attached picture wire.</li>
+				<li><strong>Select Frame - 41 1/2" wide x 15" tall:</strong> The print has a mat in the team's primary color (if applicable). The frame moulding is a 1 1/8" wide flat profile aluminum. Ready-to-hang with attached picture wire. </li>
+				<li><strong>Deluxe Frame - 44" wide x 18" tall:</strong> The print has a border in the team's secondary color (if applicable), and a bevel-cut mat in the team's primary color (if applicable). The frame moulding is a 1 1/8" wide contoured aluminum. Ready-to-hang with attached picture wire.</li>
+			</ul>
+		</div>
+	</div>
+</div>

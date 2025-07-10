@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="https://use.typekit.net/nat3tmy.css">
+<ul class="tabs" data-tab>
+    <li class="tab is-active">
+        <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
+    </li>
+    <li class="tab">
+        <a class="tab-title" href="#tab-details">Print/Frame Details</a>
+    </li>
+    {{#if product.warranty}}
+        <li class="tab {{#unless product.description}}is-active{{/unless}}">
+            <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
+        </li>
+    {{/if}}
+    {{#all product.custom_fields theme_settings.show_custom_fields_tabs}}
+        <li class="tab">
+            <a class="tab-title"
+               href="#tab-{{dashcase (lowercase (sanitize theme_settings.pdp-custom-fields-tab-label))}}"
+            >
+                {{sanitize theme_settings.pdp-custom-fields-tab-label}}
+            </a>
+        </li>
+    {{/all}}
+    {{#all settings.show_product_reviews theme_settings.show_product_reviews product.reviews.total}}
+        <li class="tab" id="tab-reviews">
+            <a class="tab-title productView-reviewTabLink" href="#tab-reviews">{{lang 'products.reviews.header' total=product.reviews.total}}</a>
+        </li>
+    {{/all}}
+</ul>
+<div class="tabs-contents">
+    <div class="tab-content is-active" id="tab-description">
+        {{{product.description}}}
+    </div>
+    <div class="tab-content" id="tab-details">
+        <h3>The Print</h3>
+        <p>The print is a high-definition panoramic photo taken at the first ever College Football Playoff Game to be played in Happy Valley. Each photo is printed on heavy art stock paper, topped with a UV resistant coating to minimize fading, and then mounted to a backer so that it resists waviness and warping caused by heat or humidity.</p>
+        <hr>
+        <h3>Professionally Framed</h3>
+        <p>The framed dimensions of the product are 44&quot; wide x 18&quot; high x 7/8&quot; deep. When framing we consider that the product will have to endure the rigors of shipping and use only high-quality 1 1/4&quot; contoured black aluminum moulding and tempered glass, which doesn't scratch or have large, jagged edges when broken. Your Deluxe Framed print is ready-to-hang with attached picture wire.</p>
+        <hr>
+        <h3>Officially Licensed</h3>
+        <p>All sports panoramas are officially licensed, which means we've passed strict requirements for quality and ethics.</p>
+        <ul>
+	    <li>We pay royalties that support scholarships and initiatives at the universities and professional leagues.</li>
+	    <li>We follow official team style guides, which means our logos and mat colors match those specified by the team or university. The panorama will match your jersey and fan cave decor.</li>
+	    <li>Our production has been audited and certified to pass fair labor standards. All our products are printed and framed in the USA.</li>
+        </ul>
+</div>
+        
+    {{#if product.warranty}}
+        <div class="tab-content {{#unless product.description}}is-active{{/unless}}" id="tab-warranty">
+            {{{product.warranty}}}
+        </div>
+    {{/if}}
+    {{#all product.custom_fields theme_settings.show_custom_fields_tabs}}
+      <div class="tab-content" id="tab-{{dashcase (lowercase (sanitize theme_settings.pdp-custom-fields-tab-label))}}">
+         <dl class="productView-info">
+            {{> components/products/custom-fields }}
+         </dl>
+      </div>
+    {{/all}}
+       <div class="tab-content" id="tab-reviews">
+           {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+       </div>
+</div>
+
+<div class="tabs-mobile">
+	<div class="tab-mobile">
+		<h3 class="tab-title-mobile">Description</h3>
+		<div class="tab-content-mobile" id="tab-description-mobile">
+			{{{product.description}}}
+		</div>
+	</div>
+	<div class="tab-mobile">
+		<h3 class="tab-title-mobile">Print/Frame Details</h3>
+    		<div class="tab-content-mobile" id="tab-details-mobile">
+        		<h3>The Print</h3>
+        <p>The print is a high-definition panoramic photo taken at the first ever College Football Playoff Game to be played in Happy Valley. Each photo is printed on heavy art stock paper, topped with a UV resistant coating to minimize fading, and then mounted to a backer so that it resists waviness and warping caused by heat or humidity.</p>
+        <hr>
+        <h3>Professionally Framed</h3>
+        <p>The framed dimensions of the product are 44&quot; wide x 18&quot; high x 7/8&quot; deep. When framing we consider that the product will have to endure the rigors of shipping and use only high-quality 1 1/4&quot; contoured black aluminum moulding and tempered glass, which doesn't scratch or have large, jagged edges when broken. Your Deluxe Framed print is ready-to-hang with attached picture wire.</p>
+        <hr>
+        <h3>Officially Licensed</h3>
+        <p>All sports panoramas are officially licensed, which means we've passed strict requirements for quality and ethics.</p>
+        <ul>
+        	<li>We pay royalties that support scholarships and initiatives at the universities and professional leagues.</li>
+        	<li>We follow official team style guides, which means our logos and mat colors match those specified by the team or university. The panorama will match your jersey and fan cave decor.</li>
+        	<li>Our production has been audited and certified to pass fair labor standards. All our products are printed and framed in the USA.</li>
+        </ul>
+		    </div>
+	</div>	
+</div>
