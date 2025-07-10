@@ -22,14 +22,6 @@
     transition: background-color 800ms ease;
     width: rem-calc(50px);
     z-index: zIndex("lower");
-
-    &::before {
-        transform: rotateZ(30deg) scaleX(1) scaleY(1) scaleZ(1);
-    }
-    
-    &::after {
-        transform: rotateZ(60deg) scaleX(1) scaleY(1) scaleZ(1);
-    }
 }
 
 .sale-flag-star,
