@@ -1,0 +1,278 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+<!-- Start header area -->
+<div class="mlb-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="mlb-splash-item mlb-splash-worldseries">
+				<a class="mlb-splash-link" href="{{base}}/mlb-world-series-panoramic-pictures-and-posters/" title="MLB World Series Baseball Panoramic Pictures & Fan Cave Decor">
+					<div class="mlb-splash-banner">
+						<h3><img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/product_images/uploaded_images/mlb.png">World Series</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="mlb-splash-item mlb-splash-redsox">
+				<a class="mlb-splash-link" href="{{base}}/boston-red-sox-mlb-baseball-panoramic-pictures-and-posters/" title="Boston Red Sox MLB Panoramic Fan Cave Decor">
+					<div class="mlb-splash-banner">
+						<h3><img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/product_images/uploaded_images/boston-red-sox.png">Boston Red Sox</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="mid-splash-bar">
+			<div class="mlb-splash-item mlb-splash-twins">
+				<a class="mlb-splash-link" href="{{base}}/minnesota-twins-mlb-baseball-panoramic-pictures-and-posters/" title="Minnesota Twins MLB Panoramic Fan Cave Decor">
+					<div class="mlb-splash-banner">
+						<h3><img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/product_images/uploaded_images/minnesota-twins.png">Minnesota Twins</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="mlb-splash-item mlb-splash-braves">
+				<a class="mlb-splash-link" href="{{base}}/atlanta-braves-mlb-baseball-panoramic-pictures-and-posters/" title="Atlanta Braves MLB Baseball Panoramic Fan Cave Posters">
+					<div class="mlb-splash-banner">
+						<h3><img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/product_images/uploaded_images/atlanta-braves.png">Atlanta Braves</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>	
+</div>
+<!-- Start custom area -->
+<!-- End custom area -->    
+
+<div class="category-top"><h3>Shop by Team</h3></div>
+<div class="category-listing">
+    <div class="category-section-mlb">
+        <a class="category-item-mlb first-mlb" href="{{base}}/mlb-world-series-panoramic-pictures-and-posters/" title="MLB World Series Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-mlb icons-mlb-mlb"></div>
+			<div class="category-icon-link-text" title="World Series">World Series</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/arizona-diamondbacks-mlb-baseball-panoramic-pictures-and-posters/" title="Arizona Diamondbacks Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-arizona-diamondbacks icons-mlb-arizona-diamondbacks"></div>
+			<div class="category-icon-link-text" title="Arizona Diamondbacks">Arizona Diamondbacks</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/atlanta-braves-mlb-baseball-panoramic-pictures-and-posters/" title="Atlanta Braves Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-atlanta-braves icons-mlb-atlanta-braves"></div>
+			<div class="category-icon-link-text" title="Atlanta Braves">Atlanta Braves</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/baltimore-orioles-mlb-baseball-panoramic-pictures-and-posters/" title="Baltimore Orioles Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-baltimore-orioles icons-mlb-baltimore-orioles"></div>
+			<div class="category-icon-link-text" title="Baltimore Orioles">Baltimore Orioles</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/boston-red-sox-mlb-baseball-panoramic-pictures-and-posters/" title="Boston Red Sox Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-boston-red-sox icons-mlb-boston-red-sox"></div>
+			<div class="category-icon-link-text" title="Boston Red Sox">Boston Red Sox</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/chicago-cubs-mlb-baseball-panoramic-pictures-and-posters/" title="Chicago Cubs Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-chicago-cubs icons-mlb-chicago-cubs"></div>
+			<div class="category-icon-link-text" title="Chicago Cubs">Chicago Cubs</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/chicago-white-sox-mlb-baseball-panoramic-pictures-and-posters/" title="Chicago White Sox Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-chicago-white-sox icons-mlb-chicago-white-sox"></div>
+			<div class="category-icon-link-text" title="Chicago White Sox">Chicago White Sox</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/cincinnati-reds-mlb-baseball-panoramic-pictures-and-posters/" title="Cincinnati Reds Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-cincinnati-reds icons-mlb-cincinnati-reds"></div>
+			<div class="category-icon-link-text" title="Cincinnati Reds">Cincinnati Reds</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/cleveland-guardians-mlb-baseball-panoramic-pictures-and-posters/" title="Cleveland Guardians Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-cleveland-guardians icons-mlb-cleveland-guardians"></div>
+			<div class="category-icon-link-text" title="Cleveland Guardians">Cleveland Guardians</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/colorado-rockies-mlb-baseball-panoramic-pictures-and-posters/" title="Colorado Rockies Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-colorado-rockies icons-mlb-colorado-rockies"></div>
+			<div class="category-icon-link-text" title="Colorado Rockies">Colorado Rockies</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/detroit-tigers-mlb-baseball-panoramic-pictures-and-posters/" title="Detroit Tigers Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-detroit-tigers icons-mlb-detroit-tigers"></div>
+			<div class="category-icon-link-text" title="Detroit Tigers">Detroit Tigers</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/houston-astros-mlb-baseball-panoramic-pictures-and-posters/" title="Houston Astros Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-houston-astros icons-mlb-houston-astros"></div>
+			<div class="category-icon-link-text" title="Houston Astros">Houston Astros</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/kansas-city-royals-mlb-baseball-panoramic-pictures-and-posters/" title="Kansas City Royals Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-kansas-city-royals icons-mlb-kansas-city-royals"></div>
+			<div class="category-icon-link-text" title="Kansas City Royals">Kansas City Royals</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/los-angeles-angels-mlb-baseball-panoramic-pictures-and-posters/" title="Los Angeles Angels Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-los-angeles-angels icons-mlb-los-angeles-angels"></div>
+			<div class="category-icon-link-text" title="Los Angeles Angels">Los Angeles Angels</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/los-angeles-dodgers-mlb-baseball-panoramic-pictures-and-posters/" title="Los Angeles Dodgers Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-los-angeles-dodgers icons-mlb-los-angeles-dodgers"></div>
+			<div class="category-icon-link-text" title="Los Angeles Dodgers">Los Angeles Dodgers</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/miami-marlins-mlb-baseball-panoramic-pictures-and-posters/" title="Miami Marlins Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-miami-marlins icons-mlb-miami-marlins"></div>
+			<div class="category-icon-link-text" title="Miami Marlins">Miami Marlins</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/milwaukee-brewers-mlb-baseball-panoramic-pictures-and-posters/" title="Milwaukee Brewers Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-milwaukee-brewers icons-mlb-milwaukee-brewers"></div>
+			<div class="category-icon-link-text" title="Milwaukee Brewers">Milwaukee Brewers</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/minnesota-twins-mlb-baseball-panoramic-pictures-and-posters/" title="Minnesota Twins Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-minnesota-twins icons-mlb-minnesota-twins"></div>
+			<div class="category-icon-link-text" title="Minnesota Twins">Minnesota Twins</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/new-york-mets-mlb-baseball-panoramic-pictures-and-posters/" title="New York Mets Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-new-york-mets icons-mlb-new-york-mets"></div>
+			<div class="category-icon-link-text" title="New York Mets">New York Mets</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/new-york-yankees-mlb-baseball-panoramic-pictures-and-posters/" title="New York Yankees Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-new-york-yankees icons-mlb-new-york-yankees"></div>
+			<div class="category-icon-link-text" title="New York Yankees">New York Yankees</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/oakland-athletics-mlb-baseball-panoramic-pictures-and-posters/" title="Oakland Athletics Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-oakland-athletics icons-mlb-oakland-athletics"></div>
+			<div class="category-icon-link-text" title="Oakland Athletics">Oakland Athletics</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/philadelphia-phillies-mlb-baseball-panoramic-pictures-and-posters/" title="Philadelphia Phillies Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-philadelphia-phillies icons-mlb-philadelphia-phillies"></div>
+			<div class="category-icon-link-text" title="Philadelphia Phillies">Philadelphia Phillies</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/pittsburgh-pirates-mlb-baseball-panoramic-pictures-and-posters/" title="Pittsburgh Pirates Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-pittsburgh-pirates icons-mlb-pittsburgh-pirates"></div>
+			<div class="category-icon-link-text" title="Pittsburgh Pirates">Pittsburgh Pirates</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/san-diego-padres-mlb-baseball-panoramic-pictures-and-posters/" title="San Diego Padres Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-san-diego-padres icons-mlb-san-diego-padres"></div>
+			<div class="category-icon-link-text" title="San Diego Padres">San Diego Padres</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/san-francisco-giants-mlb-baseball-panoramic-pictures-and-posters/" title="San Francisco Giants Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-san-francisco-giants icons-mlb-san-francisco-giants"></div>
+			<div class="category-icon-link-text" title="San Francisco Giants">San Francisco Giants</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/seattle-mariners-mlb-baseball-panoramic-pictures-and-posters/" title="Seattle Mariners Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-seattle-mariners icons-mlb-seattle-mariners"></div>
+			<div class="category-icon-link-text" title="Seattle Mariners">Seattle Mariners</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/st-louis-cardinals-mlb-baseball-panoramic-pictures-and-posters/" title="St. Louis Cardinals Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-st-louis-cardinals icons-mlb-st-louis-cardinals"></div>
+			<div class="category-icon-link-text" title="St. Louis Cardinals">St. Louis Cardinals</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/tampa-bay-rays-mlb-baseball-panoramic-pictures-and-posters/" title="Tampa Bay Rays Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-tampa-bay-rays icons-mlb-tampa-bay-rays"></div>
+			<div class="category-icon-link-text" title="Tampa Bay Rays">Tampa Bay Rays</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/texas-rangers-mlb-baseball-panoramic-pictures-and-posters/" title="Texas Rangers Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-texas-rangers icons-mlb-texas-rangers"></div>
+			<div class="category-icon-link-text" title="Texas Rangers">Texas Rangers</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/toronto-blue-jays-mlb-baseball-panoramic-pictures-and-posters/" title="Toronto Blue Jays Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-toronto-blue-jays icons-mlb-toronto-blue-jays"></div>
+			<div class="category-icon-link-text" title="Toronto Blue Jays">Toronto Blue Jays</div>
+		</a>
+	</div>
+    <div class="category-section-mlb">
+        <a class="category-item-mlb" href="{{base}}/washington-nationals-mlb-baseball-panoramic-pictures-and-posters/" title="Washington Nationals Baseball Panoramic Pictures | Fan Cave Wall Decor">
+			<div class="category-link-icon icons-mobile-mlb-washington-nationals icons-mlb-washington-nationals"></div>
+			<div class="category-icon-link-text" title="Washington Nationals">Washington Nationals</div>
+		</a>
+	</div>
+</div>
+
+<!-- End custom area -->
+    {{#or category.subcategories category.faceted_search_enabled category.shop_by_price}}
+    {{/or}}
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}

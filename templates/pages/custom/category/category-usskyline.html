@@ -1,0 +1,269 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+    
+<!-- Start header area -->
+<div class="usskyline-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="usskyline-splash-item usskyline-splash-newyork">
+				<a class="usskyline-splash-link" href="{{base}}/new-york-ny-panoramic-skyline-pictures/" title="New York, NY Panoramic City Skyline Pictures">
+					<div class="usskyline-splash-banner">
+						<h3>New York</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="usskyline-splash-item usskyline-splash-chicago">
+				<a class="usskyline-splash-link" href="{{base}}/chicago-il-panoramic-skyline-pictures/" title="Chicago, IL Panoramic City Skyline Pictures">
+					<div class="usskyline-splash-banner">
+						<h3>Chicago</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="mid-splash-bar">
+			<div class="usskyline-splash-item usskyline-splash-sanfran">
+				<a class="usskyline-splash-link" href="{{base}}/san-francisco-ca-panoramic-skyline-pictures/" title="San Francisco, CA Panoramic City Skyline Pictures">
+					<div class="usskyline-splash-banner">
+						<h3>San Francisco</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="usskyline-splash-item usskyline-splash-mpls">
+				<a class="usskyline-splash-link" href="{{base}}/minneapolis-mn-panoramic-skyline-pictures/" title="Minneapolis, MN Panoramic City Skyline Pictures">
+					<div class="usskyline-splash-banner">
+						<h3>Minneapolis</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>	
+</div>
+   
+<!-- Start custom area -->
+
+<div class="category-top"><h3>Shop by City</h3></div>
+<div class="category-listing-nologo">
+	<ul>
+		<li>
+			<a href="{{base}}/albany-ny-panoramic-skyline-pictures/" title="Albany, New York U.S. City Skyline Panoramic Wall Art">Albany, NY</a>
+		</li>
+		<li>
+			<a href="{{base}}/annapolis-md-panoramic-skyline-pictures/" title="Annapolis, Maryland U.S. City Skyline Panoramic Wall Art">Annapolis, MD</a>
+		</li>
+		<li>
+			<a href="{{base}}/atlanta-ga-panoramic-skyline-pictures/" title="Atlanta, Georgia U.S. City Skyline Panoramic Wall Art">Atlanta, GA</a>
+		</li>
+		<li>
+			<a href="{{base}}/augusta-ga-panoramic-skyline-pictures/" title="Augusta, Georgia U.S. City Skyline Panoramic Wall Art">Augusta, GA</a>
+		</li>
+		<li>
+			<a href="{{base}}/austin-tx-panoramic-skyline-pictures/" title="Austin, Texas U.S. City Skyline Panoramic Wall Art">Austin, TX</a>
+		</li>
+		<li>
+			<a href="{{base}}/baltimore-md-panoramic-skyline-pictures/" title="Baltimore, Maryland U.S. City Skyline Panoramic Wall Art">Baltimore, MD</a>
+		</li>
+		<li>
+			<a href="{{base}}/boston-ma-panoramic-skyline-pictures/" title="Boston, Massachusetts U.S. City Skyline Panoramic Wall Art">Boston, MA</a>
+		</li>
+		<li>
+			<a href="{{base}}/charleston-sc-panoramic-skyline-pictures/" title="Charleston, South Carolina U.S. City Skyline Panoramic Wall Art">Charleston, SC</a>
+		</li>
+		<li>
+			<a href="{{base}}/charlotte-nc-panoramic-skyline-pictures/" title="Charlotte, North Carolina U.S. City Skyline Panoramic Wall Art">Charlotte, NC</a>
+		</li>
+		<li>
+			<a href="{{base}}/chicago-il-panoramic-skyline-pictures/" title="Chicago, Illinois U.S. City Skyline Panoramic Wall Art">Chicago, IL</a>
+		</li>
+		<li>
+			<a href="{{base}}/cincinnati-oh-panoramic-skyline-pictures/" title="Cincinnati, Ohio U.S. City Skyline Panoramic Wall Art">Cincinnati, OH</a>
+		</li>
+		<li>
+			<a href="{{base}}/cleveland-oh-panoramic-skyline-pictures/" title="Cleveland, Ohio U.S. City Skyline Panoramic Wall Art">Cleveland, OH</a>
+		</li>
+		<li>
+			<a href="{{base}}/columbus-oh-panoramic-skyline-pictures/" title="Columbus, Ohio U.S. City Skyline Panoramic Wall Art">Columbus, OH</a>
+		</li>
+		<li>
+			<a href="{{base}}/dallas-tx-panoramic-skyline-pictures/" title="Dallas, Texas U.S. City Skyline Panoramic Wall Art">Dallas, TX</a>
+		</li>
+		<li>
+			<a href="{{base}}/denver-co-panoramic-skyline-pictures/" title="Denver, Colorado U.S. City Skyline Panoramic Wall Art">Denver, CO</a>
+		</li>
+		<li>
+			<a href="{{base}}/detroit-mi-panoramic-skyline-pictures/" title="Detroit, Michigan U.S. City Skyline Panoramic Wall Art">Detroit, MI</a>
+		</li>
+		<li>
+			<a href="{{base}}/duluth-mn-panoramic-skyline-pictures/" title="Duluth, Minnesota U.S. City Skyline Panoramic Wall Art">Duluth, MN</a>
+		</li>
+		<li>
+			<a href="{{base}}/fort-worth-tx-panoramic-skyline-pictures/" title="Fort Worth, Texas U.S. City Skyline Panoramic Wall Art">Fort Worth, TX</a>
+		</li>
+		<li>
+			<a href="{{base}}/hartford-ct-panoramic-skyline-pictures/" title="Hartford, Connecticut U.S. City Skyline Panoramic Wall Art">Hartford, CT</a>
+		</li>
+		<li>
+			<a href="{{base}}/honolulu-hi-panoramic-skyline-pictures/" title="Honolulu, Hawaii U.S. City Skyline Panoramic Wall Art">Honolulu, HI</a>
+		</li>
+		<li>
+			<a href="{{base}}/houston-tx-panoramic-skyline-pictures/" title="Houston, Texas U.S. City Skyline Panoramic Wall Art">Houston, TX</a>
+		</li>
+		<li>
+			<a href="{{base}}/indianapolis-in-panoramic-skyline-pictures/" title="Indianapolis, Indiana U.S. City Skyline Panoramic Wall Art">Indianapolis, IN</a>
+		</li>
+		<li>
+			<a href="{{base}}/jacksonville-fl-panoramic-skyline-pictures/" title="Jacksonville, Florida U.S. City Skyline Panoramic Wall Art">Jacksonville, FL</a>
+		</li>
+		<li>
+			<a href="{{base}}/kansas-city-mo-panoramic-skyline-pictures/" title="Kansas City, Missouri U.S. City Skyline Panoramic Wall Art">Kansas City, MO</a>
+		</li>
+		<li>
+			<a href="{{base}}/las-vegas-nv-panoramic-skyline-pictures/" title="Las Vegas, Nevada U.S. City Skyline Panoramic Wall Art">Las Vegas, NV</a>
+		</li>
+		<li>
+			<a href="{{base}}/little-rock-ar-panoramic-skyline-pictures/" title="Little Rock, Arkansas U.S. City Skyline Panoramic Wall Art">Little Rock, AR</a>
+		</li>
+		<li>
+			<a href="{{base}}/los-angeles-ca-panoramic-skyline-pictures/" title="Los Angeles, California U.S. City Skyline Panoramic Wall Art">Los Angeles, CA</a>
+		</li>
+		<li>
+			<a href="{{base}}/louisville-ky-panoramic-skyline-pictures/" title="Louisville, Kentucky U.S. City Skyline Panoramic Wall Art">Louisville, KY</a>
+		</li>
+		<li>
+			<a href="{{base}}/madison-wi-panoramic-skyline-pictures/" title="Madison, Wisconsin U.S. City Skyline Panoramic Wall Art">Madison, WI</a>
+		</li>
+		<li>
+			<a href="{{base}}/memphis-tn-panoramic-skyline-pictures/" title="Memphis, Tennessee U.S. City Skyline Panoramic Wall Art">Memphis, TN</a>
+		</li>
+		<li>
+			<a href="{{base}}/miami-fl-panoramic-skyline-pictures/" title="Miami, Florida U.S. City Skyline Panoramic Wall Art">Miami, FL</a>
+		</li>
+		<li>
+			<a href="{{base}}/milwaukee-wi-panoramic-skyline-pictures/" title="Milwaukee, Wisconsin U.S. City Skyline Panoramic Wall Art">Milwaukee, WI</a>
+		</li>
+		<li>
+			<a href="{{base}}/minneapolis-mn-panoramic-skyline-pictures/" title="Minneapolis, Minnesota U.S. City Skyline Panoramic Wall Art">Minneapolis, MN</a>
+		</li>
+		<li>
+			<a href="{{base}}/nashville-tn-panoramic-skyline-pictures/" title="Nashville, Tennessee U.S. City Skyline Panoramic Wall Art">Nashville, TN</a>
+		</li>
+		<li>
+			<a href="{{base}}/new-haven-ct-panoramic-skyline-pictures/" title="New Haven, Connecticut U.S. City Skyline Panoramic Wall Art">New Haven, CT</a>
+		</li>
+		<li>
+			<a href="{{base}}/new-orleans-la-panoramic-skyline-pictures/" title="New Orleans, Louisiana U.S. City Skyline Panoramic Wall Art">New Orleans, LA</a>
+		</li>
+		<li>
+			<a href="{{base}}/new-york-ny-panoramic-skyline-pictures/" title="New York, New York U.S. City Skyline Panoramic Wall Art">New York, NY</a>
+		</li>
+		<li>
+			<a href="{{base}}/norfolk-va-panoramic-skyline-pictures/" title="Norfolk, Virginia U.S. City Skyline Panoramic Wall Art">Norfolk, VA</a>
+		</li>
+		<li>
+			<a href="{{base}}/omaha-ne-panoramic-skyline-pictures/" title="Omaha, Nebraska U.S. City Skyline Panoramic Wall Art">Omaha, NE</a>
+		</li>
+		<li>
+			<a href="{{base}}/orlando-fl-panoramic-skyline-pictures/" title="Orlando, Florida U.S. City Skyline Panoramic Wall Art">Orlando, FL</a>
+		</li>
+		<li>
+			<a href="{{base}}/philadelphia-pa-panoramic-skyline-pictures/" title="Philadelphia, Pennsylvania U.S. City Skyline Panoramic Wall Art">Philadelphia, PA</a>
+		</li>
+		<li>
+			<a href="{{base}}/phoenix-az-panoramic-skyline-pictures/" title="Phoenix, Arizona U.S. City Skyline Panoramic Wall Art">Phoenix, AZ</a>
+		</li>
+		<li>
+			<a href="{{base}}/pittsburgh-pa-panoramic-skyline-pictures/" title="Pittsburgh, Pennsylvania U.S. City Skyline Panoramic Wall Art">Pittsburgh, PA</a>
+		</li>
+		<li>
+			<a href="{{base}}/portland-or-panoramic-skyline-pictures/" title="Portland, Oregon U.S. City Skyline Panoramic Wall Art">Portland, OR</a>
+		</li>
+		<li>
+			<a href="{{base}}/providence-ri-panoramic-skyline-pictures/" title="Providence, Rhode Island U.S. City Skyline Panoramic Wall Art">Providence, RI</a>
+		</li>
+		<li>
+			<a href="{{base}}/richmond-va-panoramic-skyline-pictures/" title="Richmond, Virginia U.S. City Skyline Panoramic Wall Art">Richmond, VA</a>
+		</li>
+		<li>
+			<a href="{{base}}/rochester-ny-panoramic-skyline-pictures/" title="Rochester, New York U.S. City Skyline Panoramic Wall Art">Rochester, NY</a>
+		</li>
+		<li>
+			<a href="{{base}}/saint-louis-mo-panoramic-skyline-pictures/" title="St. Louis, Missouri U.S. City Skyline Panoramic Wall Art">St. Louis, MO</a>
+		</li>
+		<li>
+			<a href="{{base}}/saint-paul-mn-panoramic-skyline-pictures/" title="Saint Paul, Minnesota U.S. City Skyline Panoramic Wall Art">Saint Paul, MN</a>
+		</li>
+		<li>
+			<a href="{{base}}/salt-lake-city-ut-panoramic-skyline-pictures/" title="Salt Lake City, Utah U.S. City Skyline Panoramic Wall Art">Salt Lake City, UT</a>
+		</li>
+		<li>
+			<a href="{{base}}/san-antonio-tx-panoramic-skyline-pictures/" title="San Antonio, Texas U.S. City Skyline Panoramic Wall Art">San Antonio, TX</a>
+		</li>
+		<li>
+			<a href="{{base}}/san-diego-ca-panoramic-skyline-pictures/" title="San Diego, California U.S. City Skyline Panoramic Wall Art">San Diego, CA</a>
+		</li>
+		<li>
+			<a href="{{base}}/san-francisco-ca-panoramic-skyline-pictures/" title="San Francisco, California U.S. City Skyline Panoramic Wall Art">San Francisco, CA</a>
+		</li>
+		<li>
+			<a href="{{base}}/savannah-ga-panoramic-skyline-pictures/" title="Savannah, Georgia U.S. City Skyline Panoramic Wall Art">Savannah, GA</a>
+		</li>
+		<li>
+			<a href="{{base}}/seattle-wa-panoramic-skyline-pictures/" title="Seattle, Washington U.S. City Skyline Panoramic Wall Art">Seattle, WA</a>
+		</li>
+		<li>
+			<a href="{{base}}/sturgis-sd-panoramic-skyline-pictures/" title="Sturgis, South Dakota U.S. City Skyline Panoramic Wall Art">Sturgis, SD</a>
+		</li>
+		<li>
+			<a href="{{base}}/tampa-fl-panoramic-skyline-pictures/" title="Tampa, Florida U.S. City Skyline Panoramic Wall Art">Tampa, FL</a>
+		</li>
+		<li>
+			<a href="{{base}}/washington-dc-panoramic-skyline-pictures/" title="Washington, DC U.S. City Skyline Panoramic Wall Art">Washington, DC</a>
+		</li>
+	</ul>
+</div>
+
+<!-- End custom area -->
+    {{#or category.subcategories category.faceted_search_enabled category.shop_by_price}}
+    {{/or}}
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}

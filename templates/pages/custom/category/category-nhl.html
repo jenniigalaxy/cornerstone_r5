@@ -1,0 +1,265 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+<!-- Start header area -->
+<div class="nhl-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="nhl-splash-item nhl-splash-stanley">
+				<a class="nhl-splash-link" href="{{base}}/stanley-cup-panoramic-pictures-and-posters/" title="Stanley Cup Panoramic Pictures and Posters | Fan Cave Decor">
+					<div class="nhl-splash-banner">
+						<h3>Stanley Cup<span style="font-size:10px;">&reg;</span></h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="nhl-splash-item nhl-splash-premier">
+				<a class="nhl-splash-link" href="{{base}}/nhl-premier-events-panoramic-pictures/" title="NHL Premier Events Panoramic Pictures and Wall Decor">
+					<div class="nhl-splash-banner">
+						<h3>Premier Events</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>	
+</div>	
+
+<!-- Start custom area -->
+
+<div class="category-top"><h3>Shop by Team</h3></div>
+<div class="category-listing-nhl">
+	<div class="category-section-nhl">
+		<a class="category-item-nhl first-nhl" href="{{base}}/stanley-cup-panoramic-pictures-and-posters/" title="Stanley Cup Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlsc icons-nhl-nhlsc"></div><div class="category-icon-link-text" title="Stanley Cup">Stanley Cup&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/nhl-premier-events-panoramic-pictures/" title="NHL100 Classic Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhl100 icons-nhl-nhl100"></div><div class="category-icon-link-text" title="NHL 100 Classic">NHL 100 Classic&trade;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/nhl-centennial-classic-panoramic-pictures/" title="NHL Centennial Classic Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlcc icons-nhl-nhlcc"></div><div class="category-icon-link-text" title="NHL Centennial Classic">NHL Centennial Classic&trade;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/heritage-classic-panoramic-posters/" title="NHL Heritage Classic Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlhc icons-nhl-nhlhc"></div><div class="category-icon-link-text" title="NHL Heritage Classic">NHL Heritage Classic&trade;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/stadium-series-panoramic-posters/" title="NHL Stadium Series Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlss icons-nhl-nhlss"></div><div class="category-icon-link-text" title="NHL Stadium Series">NHL Stadium Series&trade;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/winter-classic-panoramic-posters/" title="NHL Winter Classic Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlwc icons-nhl-nhlwc"></div><div class="category-icon-link-text" title="NHL Winter Classic">NHL Winter Classic&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/anaheim-ducks-panoramic-pictures-and-posters/" title="Anaheim Ducks Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlduck icons-nhl-nhlduck"></div><div class="category-icon-link-text" title="Anaheim Ducks">Anaheim Ducks&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/boston-bruins-panoramic-pictures-and-posters/" title="Boston Bruins Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlbru icons-nhl-nhlbru"></div><div class="category-icon-link-text" title="Boston Bruins">Boston Bruins&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/buffalo-sabres-panoramic-pictures-and-posters/" title="Buffalo Sabres Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlsab icons-nhl-nhlsab"></div><div class="category-icon-link-text" title="Buffalo Sabres">Buffalo Sabres&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/calgary-flames-panoramic-pictures-and-posters/" title="Calgary Flames Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlflam icons-nhl-nhlflam"></div><div class="category-icon-link-text" title="Calgary Flames">Calgary Flames&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/carolina-hurricanes-panoramic-pictures-and-posters/" title="Carolina Hurricanes Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlhur icons-nhl-nhlhur"></div><div class="category-icon-link-text" title="Carolina Hurricanes">Carolina Hurricanes&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/chicago-blackhawks-panoramic-pictures-and-posters/" title="Chicago Blackhawks Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlblack icons-nhl-nhlblack"></div><div class="category-icon-link-text" title="Chicago Blackhawks">Chicago Blackhawks&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/colorado-avalanche-panoramic-pictures-and-posters/" title="Colorado Avalanche Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlava icons-nhl-nhlava"></div><div class="category-icon-link-text" title="Colorado Avalanche">Colorado Avalanche&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/columbus-blue-jackets-panoramic-pictures-and-posters/" title="Columbus Blue Jackets Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlbjac icons-nhl-nhlbjac"></div><div class="category-icon-link-text" title="Columbus Blue Jackets">Columbus Blue Jackets&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/dallas-stars-panoramic-pictures-and-posters/" title="Dallas Stars Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlstar icons-nhl-nhlstar"></div><div class="category-icon-link-text" title="Dallas Stars">Dallas Stars&trade;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/detroit-red-wings-panoramic-pictures-and-posters/" title="Detroit Red Wings Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlwing icons-nhl-nhlwing"></div><div class="category-icon-link-text" title="Detroit Red Wings">Detroit Red Wings&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/edmonton-oilers-panoramic-pictures-and-posters/" title="Edmonton Oilers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhloil icons-nhl-nhloil"></div><div class="category-icon-link-text" title="Edmonton Oilers">Edmonton Oilers&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/florida-panthers-panoramic-pictures-and-posters/" title="Florida Panthers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlpan icons-nhl-nhlpan"></div><div class="category-icon-link-text" title="Florida Panthers">Florida Panthers&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/la-kings-panoramic-pictures-and-posters/" title="LA Kings Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlking icons-nhl-nhlking"></div><div class="category-icon-link-text" title="Los Angeles Kings">LA Kings&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/minnesota-wild-panoramic-pictures-and-posters/" title="Minnesota Wild Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlwild icons-nhl-nhlwild"></div><div class="category-icon-link-text" title="Minnesota Wild">Minnesota Wild&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/montreal-canadiens-panoramic-pictures-and-posters/" title="Montreal Canadiens Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlca icons-nhl-nhlca"></div><div class="category-icon-link-text" title="Montreal Canadiens">Montreal Canadiens&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/nashville-predators-panoramic-pictures-and-posters/" title="Nashville Predators Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlpred icons-nhl-nhlpred"></div><div class="category-icon-link-text" title="Nashville Predators">Nashville Predators&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/new-jersey-devils-panoramic-pictures-and-posters/" title="New Jersey Devils Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhldev icons-nhl-nhldev"></div><div class="category-icon-link-text" title="New Jersey Devils">New Jersey Devils&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/new-york-islanders-panoramic-pictures-and-posters/" title="New York Islanders Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlisl icons-nhl-nhlisl"></div><div class="category-icon-link-text" title="New York Islanders">New York Islanders&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/new-york-rangers-panoramic-pictures-and-posters/" title="New York Rangers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlrang icons-nhl-nhlrang"></div><div class="category-icon-link-text" title="New York Rangers">New York Rangers&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/ottawa-senators-panoramic-pictures-and-posters/" title="Ottawa Senators Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlsen icons-nhl-nhlsen"></div><div class="category-icon-link-text" title="Ottawa Senators">Ottawa Senators&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/philadelphia-flyers-panoramic-pictures-and-posters/" title="Philadelphia Flyers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlfly icons-nhl-nhlfly"></div><div class="category-icon-link-text" title="Philadelphia Flyers">Philadelphia Flyers&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/pittsburgh-penguins-panoramic-pictures-and-posters/" title="Pittsburgh Penguins Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlpen icons-nhl-nhlpen"></div><div class="category-icon-link-text" title="Pittsburgh Penguins">Pittsburgh Penguins&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/san-jose-sharks-panoramic-pictures-and-posters/" title="San Jose Sharks Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlshar icons-nhl-nhlshar"></div><div class="category-icon-link-text" title="San Jose Sharks">San Jose Sharks&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/seattle-kraken-panoramic-pictures-and-posters/" title="Seattle Kraken Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlkrak icons-nhl-nhlkrak"></div><div class="category-icon-link-text" title="Seattle Kraken">Seattle Kraken&trade;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/st-louis-blues-panoramic-pictures-and-posters/" title="St. Louis Blues Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlblu icons-nhl-nhlblu"></div><div class="category-icon-link-text" title="St. Louis Blues">St. Louis Blues&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/tampa-bay-lightning-panoramic-pictures-and-posters/" title="Tampa Bay Lightning Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlligh icons-nhl-nhlligh"></div><div class="category-icon-link-text" title="Tampa Bay Lightning">Tampa Bay Lightning&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/toronto-maple-leafs-panoramic-pictures-and-posters/" title="Toronto Maple Leafs Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlmap icons-nhl-nhlmap"></div><div class="category-icon-link-text" title="Toronto Maple Leafs">Toronto Maple Leafs&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/utah-mammoth-panoramic-pictures-and-posters/" title="Utah Mammoth Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlmam icons-nhl-nhlmam"></div><div class="category-icon-link-text" title="Utah Mammoth">Utah Mammoth&trade;</div>
+		</a>
+	</div>
+	
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/vancouver-canucks-panoramic-pictures-and-posters/" title="Vancouver Canucks Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlcanu icons-nhl-nhlcanu"></div><div class="category-icon-link-text" title="Vancouver Canucks">Vancouver Canucks&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/vegas-golden-knights-nhl-panoramic-pictures" title="Vegas Golden Knights Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlgok icons-nhl-nhlgok"></div><div class="category-icon-link-text" title="Vegas Golden Knights">Vegas Golden Knights&trade;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/washington-capitals-panoramic-pictures-and-posters/" title="Washington Capitals Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhlcap icons-nhl-nhlcap"></div><div class="category-icon-link-text" title="Washington Capitals">Washington Capitals&reg;</div>
+		</a>
+	</div>
+	<div class="category-section-nhl">
+		<a class="category-item-nhl" href="{{base}}/winnipeg-jets-panoramic-pictures-and-posters/" title="Winnipeg Jets Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nhl-nhljet icons-nhl-nhljet"></div><div class="category-icon-link-text" title="Winnipeg Jets">Winnipeg Jets&reg;</div>
+		</a>
+	</div>
+</div>
+
+<!-- End custom area -->
+    {{#or category.subcategories category.faceted_search_enabled category.shop_by_price}}
+    {{/or}}
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}

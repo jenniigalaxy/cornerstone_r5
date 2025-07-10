@@ -1,0 +1,229 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+<!-- Start custom area -->
+<!-- Start custom area -->
+<div class="nascar-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="nascar-splash-item nascar-splash-daytona">
+				<a class="nascar-splash-link" href="{{base}}/daytona-international-speedway-panoramic-poster-aerial-picture/" title="Daytona International Speedway Panoramic Aerial Wall Decor">
+					<div class="nascar-splash-banner">
+						<h3>Daytona</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="nascar-splash-item nascar-splash-indy">
+				<a class="nascar-splash-link" href="{{base}}/indianapolis-motor-speedway-panoramic-poster-aerial-picture/" title="Indianapolis Motor Speedway Panoramic Aerial Posters">
+					<div class="nascar-splash-banner">
+						<h3>Indianapolis</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="mid-splash-bar">
+			<div class="nascar-splash-item nascar-splash-bristol">
+				<a class="nascar-splash-link" href="{{base}}/bristol-motor-speedway-panoramic-poster-aerial-picture/" title="Bristol Motor Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+					<div class="nascar-splash-banner">
+						<h3>Bristol</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="nascar-splash-item nascar-splash-talladega">
+				<a class="nascar-splash-link" href="{{base}}/talladega-superspeedway-panoramic-poster-aerial-picture/" title="Talladega Superspeedway Panoramic Poster Aerial Pictures">
+					<div class="nascar-splash-banner">
+						<h3>Talladega</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>	
+</div>	  
+
+<div class="category-top category-top-nascar"><h3>Shop by Track</h3></div>
+<div class="category-listing-nascarlong">
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/auto-club-speedway-panoramic-poster-aerial-picture/" title="Auto Club Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-acs icons-nascar-acs"></div>
+			<div class="category-icon-link-text-nascar" title="Auto Club Speedway">Auto Club Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/bristol-motor-speedway-panoramic-poster-aerial-picture/" title="Bristol Motor Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-bms icons-nascar-bms"></div>
+			<div class="category-icon-link-text-nascar" title="Bristol Motor Speedway">Bristol Motor Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/charlotte-motor-speedway-panoramic-poster-aerial-picture/" title="Charlotte Motor Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-cms icons-nascar-cms"></div>
+			<div class="category-icon-link-text-nascar" title="Charlotte Motor Speedway">Charlotte Motor Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/darlington-raceway-panoramic-poster-aerial-picture/" title="Darlington Raceway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-dr icons-nascar-dr"></div>
+			<div class="category-icon-link-text-nascar" title="Darlington Raceway">Darlington Raceway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/daytona-international-speedway-panoramic-poster-aerial-picture/" title="Daytona International Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-dis icons-nascar-dis"></div>
+			<div class="category-icon-link-text-nascar" title="Daytona International Speedway">Daytona International Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/dover-international-speedway-panoramic-poster-aerial-picture/" title="Dover International Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-dvis icons-nascar-dvis"></div>
+			<div class="category-icon-link-text-nascar" title="Dover International Speedway">Dover International Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar first-nascar" href="{{base}}/echopark-speedway-panoramic-poster-aerial-picture/" title="EchoPark Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-eps icons-nascar-eps"></div>
+			<div class="category-icon-link-text-nascar" title="EchoPark Speedway">EchoPark Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/homestead-miami-panoramic-poster-aerial-picture/" title="Homestead-Miami Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-hms icons-nascar-hms"></div>
+			<div class="category-icon-link-text-nascar" title="Homestead-Miami Speedway">Homestead-Miami Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/indianapolis-motor-speedway-panoramic-poster-aerial-picture/" title="Indianapolis Motor Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-ims icons-nascar-ims"></div>
+			<div class="category-icon-link-text-nascar" title="Indianapolis Motor Speedway">Indianapolis Motor Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/kansas-speedway-panoramic-poster-aerial-picture/" title="Kansas Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-ks icons-nascar-ks"></div>
+			<div class="category-icon-link-text-nascar" title="Kansas Speedway">Kansas Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/las-vegas-speedway-panoramic-poster-aerial-picture/" title="Las Vegas Motor Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-lvms icons-nascar-lvms"></div>
+			<div class="category-icon-link-text-nascar" title="Las Vegas Motor Speedway">Las Vegas Motor Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/martinsville-speedway-panoramic-poster-aerial-picture/" title="Martinsville Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-ms icons-nascar-ms"></div>
+			<div class="category-icon-link-text-nascar" title="Martinsville Speedway">Martinsville Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/michigan-international-speedway-panoramic-poster-aerial-picture/" title="Michigan International Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-mis icons-nascar-mis"></div>
+			<div class="category-icon-link-text-nascar" title="Michigan International Speedway">Michigan International Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/nashville-superspeedway-panoramic-poster-nascar-aerial-pictures/" title="Nashville Superspeedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-nvs icons-nascar-nvs"></div>
+			<div class="category-icon-link-text-nascar" title="Nashville Superspeedway">Nashville Superspeedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/new-hampshire-speedway-panoramic-poster-aerial-picture/" title="New Hampshire Motor Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-nhms icons-nascar-nhms"></div>
+			<div class="category-icon-link-text-nascar" title="New Hampshire Motor Speedway">New Hampshire Motor Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/north-wilkesboro-speedway-panoramic-poster-nascar-aerial-pictures/" title="North Wilkesboro Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-nws icons-nascar-nws"></div>
+			<div class="category-icon-link-text-nascar" title="North Wilkesboro Speedway">North Wilkesboro Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/phoenix-raceway-panoramic-poster-aerial-picture/" title="Phoenix Raceway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-pir icons-nascar-pir"></div>
+			<div class="category-icon-link-text-nascar" title="Phoenix Raceway">Phoenix Raceway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/pocono-raceway-panoramic-poster-aerial-picture/" title="Pocono Raceway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-pr icons-nascar-pr"></div>
+			<div class="category-icon-link-text-nascar" title="Pocono Raceway">Pocono Raceway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/richmond-international-raceway-panoramic-poster-aerial-picture/" title="Richmond Raceway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-rir icons-nascar-rir"></div>
+			<div class="category-icon-link-text-nascar" title="Richmond Raceway">Richmond Raceway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/sonoma-raceway-panoramic-poster-aerial-picture/" title="Sonoma Raceway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-son icons-nascar-son"></div>
+			<div class="category-icon-link-text-nascar" title="Sonoma Raceway">Sonoma Raceway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/talladega-superspeedway-panoramic-poster-aerial-picture/" title="Talladega Superspeedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-tss icons-nascar-tss"></div>
+			<div class="category-icon-link-text-nascar" title="Talladega Superspeedway">Talladega Superspeedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/texas-motor-speedway-panoramic-poster-aerial-picture/" title="Texas Motor Speedway NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-tms icons-nascar-tms"></div>
+			<div class="category-icon-link-text-nascar" title="Texas Motor Speedway">Texas Motor Speedway</div>
+		</a>
+	</div>
+	<div class="category-section-nascar">
+		<a class="category-item-nascar" href="{{base}}/watkins-glen-panoramic-poster-aerial-picture/" title="Watkins Glen International NASCAR Panoramic Aerial Race Day Picture | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nascar-wgi icons-nascar-wgi"></div>
+			<div class="category-icon-link-text-nascar" title="Watkins Glen International">Watkins Glen International</div>
+		</a>
+	</div>
+</div>
+
+<!-- End custom area -->
+    {{#or category.subcategories category.faceted_search_enabled category.shop_by_price}}
+    {{/or}}
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}

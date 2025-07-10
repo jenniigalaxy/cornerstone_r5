@@ -1,0 +1,115 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+<!-- Start header area -->
+<div class="natpark-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="natpark-splash-item natpark-splash-gc">
+				<a class="natpark-splash-link" href="{{base}}/grand-canyon-scenic-landscape-panoramic-art-poster/" title="Grand Canyon National Park Scenic Panoramic Wall Art">
+					<div class="natpark-splash-banner">
+						<h3>Grand Canyon</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="natpark-splash-item natpark-splash-mv">
+				<a class="natpark-splash-link" href="{{base}}/monument-valley-scenic-landscape-panoramic-art-poster/" title="Monument Valley Scenic Landscape Panoramic Art Posters">
+					<div class="natpark-splash-banner">
+						<h3>Monument Valley</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="mid-splash-bar">
+			<div class="natpark-splash-item natpark-splash-glacier">
+				<a class="natpark-splash-link" href="{{base}}/glacier-national-park-scenic-panoramic-wall-decor/" title="Glacier National Park Scenic Panoramic Wall Decor">
+					<div class="natpark-splash-banner">
+						<h3>Glacier</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="natpark-splash-item natpark-splash-arches">
+				<a class="natpark-splash-link" href="{{base}}/arches-national-park-scenic-landscape-panoramic-art-poster/" title="Arches National Park Scenic Landscape Panoramic Posters">
+					<div class="natpark-splash-banner">
+						<h3>Arches</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>	
+</div>	
+<!-- Start custom area -->
+<div class="category-top"><h3>Shop by National Park</h3></div>
+<div class="category-listing-long">
+	<ul>
+		<li><a href="{{base}}/arches-national-park-scenic-landscape-panoramic-art-poster/" title="Arches National Park Panoramic Pictures and Posters">Arches National Park</a></li>
+		<li><a href="{{base}}/bryce-canyon-scenic-landscape-panoramic-art-poster/" title="Bryce Canyon National Park Panoramic Pictures and Posters">Bryce Canyon National Park</a></li>
+		<li><a href="{{base}}/canyonlands-national-park-scenic-landscape-panoramic-art-poster/" title="Canyonlands National Park Panoramic Pictures and Posters">Canyonlands National Park</a></li>
+		<li><a href="{{base}}/capitol-reef-national-park-scenic-landscape-panoramic-art-poster/" title="Capitol Reef National Park Panoramic Pictures and Posters">Capitol Reef National Park</a></li>
+		<li><a href="{{base}}/crater-lake-scenic-landscape-panoramic-art-poster/" title="Crater Lake National Park Panoramic Pictures and Posters">Crater Lake National Park</a></li>
+		<li><a href="{{base}}/dead-horse-point/" title="Dead Horse Point State Park Panoramic Pictures and Posters">Dead Horse Point State Park</a></li>
+		<li><a href="{{base}}/denali-national-park-scenic-landscape-panoramic-art-prints/" title="Denali National Park Panoramic Pictures and Posters">Denali National Park</a></li>
+		<li><a href="{{base}}/garden-of-the-gods-national-natural-landmark-panoramic-wall-decor/" title="Garden of the Gods National Natural Landmark Panoramic Pictures and Posters">Garden of the Gods</a></li>
+		<li><a href="{{base}}/gateway-arch-national-park-scenic-landscape-panoramic-art-poster/" title="Gateway Arch National Park Panoramic Pictures and Posters">Gateway Arch National Park</a></li>
+		<li><a href="{{base}}/glacier-national-park-scenic-panoramic-wall-decor/" title="Glacier National Park Panoramic Wall Decor">Glacier National Park</a></li>
+		<li><a href="{{base}}/glen-canyon-scenic-landscape-panoramic-art-poster/" title="Glen Canyon Dam Panoramic Pictures and Posters">Glen Canyon Dam</a></li>
+		<li><a href="{{base}}/grand-canyon-scenic-landscape-panoramic-art-poster/" title="Grand Canyon National Park Panoramic Pictures and Posters">Grand Canyon National Park</a></li>
+		<li><a href="{{base}}/grand-teton-scenic-landscape-panoramic-art-poster/" title="Grand Teton National Park Panoramic Pictures and Posters">Grand Teton National Park</a></li>
+		<li><a href="{{base}}/hoover-dam-scenic-landscape-panoramic-art-poster/" title="Hoover Dam Panoramic Pictures and Posters">Hoover Dam</a></li>
+		<li><a href="{{base}}/horseshoe-bend-scenic-landscape-panoramic-art-poster/" title="Horseshoe Bend Panoramic Pictures and Posters">Horseshoe Bend</a></li>
+		<li><a href="{{base}}/kings-canyon-national-park-panoramic-wall-decor/" title="Kings Canyon National Park Panoramic Pictures and Posters">Kings Canyon National Park</a></li>
+		<li><a href="{{base}}/lake-tahoe-poster-panoramic-fine-art/" title="Lake Tahoe Panoramic Pictures and Posters">Lake Tahoe</a></li>
+		<li><a href="{{base}}/monument-valley-scenic-landscape-panoramic-art-poster/" title="Monument Valley Panoramic Pictures and Posters">Monument Valley</a></li>
+		<li><a href="{{base}}/mount-rushmore-scenic-landscape-panoramic-art-poster/" title="Mount Rushmore National Memorial Panoramic Pictures and Posters">Mount Rushmore National Memorial</a></li>
+		<li><a href="{{base}}/rocky-mountain-national-park-scenic-panoramic-prints/" title="Rocky Mountain National Park Panoramic Pictures and Posters">Rocky Mountain National Park</a></li>
+		<li><a href="{{base}}/sequoia-national-park-scenic-landscape-panoramic-art-poster/" title="Sequoia National Park Panoramic Pictures and Posters">Sequoia National Park</a></li>
+		<li><a href="{{base}}/shenandoah-national-park-panoramic-pictures-wall-art/" title="Shenandoah National Park Panoramic Pictures and Posters">Shenandoah National Park</a></li>		
+		<li><a href="{{base}}/voyageurs-national-park-scenic-panoramic-prints/" title="Voyageurs National Park Panoramic Pictures and Prints">Voyageurs National Park</a></li>
+		<li><a href="{{base}}/yellowstone-national-park-scenic-landscape-panoramic-art-poster/" title="Yellowstone National Park Panoramic Pictures and Posters">Yellowstone National Park</a></li>
+		<li><a href="{{base}}/yosemite-national-park-scenic-landscape-panoramic-art-poster/" title="Yosemite National Park Panoramic Pictures and Posters">Yosemite National Park</a></li>
+		<li><a href="{{base}}/zion-national-park-scenic-landscape-panoramic-art-poster/" title="Zion National Park Panoramic Pictures and Posters">Zion National Park</a></li>
+	</ul>
+</div>
+
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}

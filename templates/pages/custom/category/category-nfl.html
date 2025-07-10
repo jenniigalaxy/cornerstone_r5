@@ -1,0 +1,241 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+<!-- Start header area -->
+<!--<div class="nfl-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="nfl-splash-item nfl-splash-superbowl">
+				<a class="nfl-splash-link" href="{{base}}/nfl-super-bowl-panoramic-pictures/" title="NFL Super Bowl Panoramic Pictures and Posters - Fan Cave Decor">
+					<div class="nfl-splash-banner">
+						<h3><img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/product_images/uploaded_images/nflsb20-r2.png">Super Bowl</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="nfl-splash-item nfl-splash-oversized">
+				<a class="nfl-splash-link" href="{{base}}/xl-and-oversized-panoramic-format-wall-decor/" title="NFL Oversized Canvas, Metal & Acrylic Fan Cave Prints">
+					<div class="nfl-splash-banner">
+						<h3>XL Wall Decor</h3>
+						<h4>Canvas &amp; Metal</h4>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>	
+</div>-->
+
+<!-- Start custom area -->
+
+<div class="category-top"><h3>Shop by Team</h3></div>
+<div class="category-listing-nfl">
+	<div class="category-section-nfl">
+		<a class="category-item-nfl first-nfl" href="{{base}}/nfl-super-bowl-panoramic-pictures/" title="Super Bowl Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflsb icons-nfl-nflsb"></div><div class="category-icon-link-text" title="Super Bowl">Super Bowl</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/arizona-cardinals-panoramic-pictures-and-posters/" title="Arizona Cardinals Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflcar icons-nfl-nflcar"></div><div class="category-icon-link-text" title="Arizona Cardinals">Arizona Cardinals</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/atlanta-falcons-panoramic-pictures-and-posters/" title="Atlanta Falcons Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflfal icons-nfl-nflfal"></div><div class="category-icon-link-text" title="Atlanta Falcons">Atlanta Falcons</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/baltimore-ravens-panoramic-pictures-and-posters/" title="Baltimore Ravens Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflrav icons-nfl-nflrav"></div><div class="category-icon-link-text" title="Baltimore Ravens">Baltimore Ravens</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/buffalo-bills-panoramic-pictures-and-posters/" title="Buffalo Bills Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflbil icons-nfl-nflbil"></div><div class="category-icon-link-text" title="Buffalo Bills">Buffalo Bills</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/carolina-panthers-panoramic-pictures-and-posters/" title="Carolina Panthers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflpan icons-nfl-nflpan"></div><div class="category-icon-link-text" title="Carolina Panthers">Carolina Panthers</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/chicago-bears-panoramic-pictures-and-posters/" title="Chicago Bears Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflbear icons-nfl-nflbear"></div><div class="category-icon-link-text" title="Chicago Bears">Chicago Bears</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/cincinnati-bengals-panoramic-pictures-and-posters/" title="Cincinnati Bengals Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflben icons-nfl-nflben"></div><div class="category-icon-link-text" title="Cincinnati Bengals">Cincinnati Bengals</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/cleveland-browns-panoramic-pictures-and-posters/" title="Cleveland Browns Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflbrn icons-nfl-nflbrn"></div><div class="category-icon-link-text" title="Cleveland Browns">Cleveland Browns</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/dallas-cowboys-panoramic-pictures-and-posters/" title="Dallas Cowboys Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflcow icons-nfl-nflcow"></div><div class="category-icon-link-text" title="Dallas Cowboys">Dallas Cowboys</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/denver-broncos-panoramic-pictures-and-posters/" title="Denver Broncos Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflbron icons-nfl-nflbron"></div><div class="category-icon-link-text" title="Denver Broncos">Denver Broncos</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/detroit-lions-panoramic-pictures-and-posters/" title="Detroit Lions Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nfllion icons-nfl-nfllion"></div><div class="category-icon-link-text" title="Detroit Lions">Detroit Lions</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/green-bay-packers-panoramic-pictures-and-posters/" title="Green Bay Packers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflpack icons-nfl-nflpack"></div><div class="category-icon-link-text" title="Green Bay Packers">Green Bay Packers</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/houston-texans-panoramic-pictures-and-posters/" title="Houston Texans Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nfltex icons-nfl-nfltex"></div><div class="category-icon-link-text" title="Houston Texans">Houston Texans</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/indianapolis-colts-panoramic-pictures-and-posters/" title="Indianapolis Colts Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflcolt icons-nfl-nflcolt"></div><div class="category-icon-link-text" title="Indianapolis Colts">Indianapolis Colts</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/jacksonville-jaguars-panoramic-pictures-and-posters/" title="Jacksonville Jaguars Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nfljag icons-nfl-nfljag"></div><div class="category-icon-link-text" title="Jacksonville Jaguars">Jacksonville Jaguars</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/kansas-city-chiefs-panoramic-pictures-and-posters/" title="Kansas City Chiefs Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflchf icons-nfl-nflchf"></div><div class="category-icon-link-text" title="Kansas City Chiefs">Kansas City Chiefs</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/las-vegas-raiders-panoramic-pictures-and-posters/" title="Las Vegas Raiders Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflraid icons-nfl-nflraid"></div><div class="category-icon-link-text" title="Las Vegas Raiders">Las Vegas Raiders</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/los-angeles-chargers-panoramic-pictures-and-posters/" title="Los Angeles Chargers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflchg icons-nfl-nflchg"></div><div class="category-icon-link-text" title="Los Angeles Chargers">Los Angeles Chargers</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/los-angeles-rams-panoramic-pictures-and-posters/" title="Los Angeles Rams Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflram icons-nfl-nflram"></div><div class="category-icon-link-text" title="Los Angeles Rams">Los Angeles Rams</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/miami-dolphins-panoramic-pictures-and-posters/" title="Miami Dolphins Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nfldol icons-nfl-nfldol"></div><div class="category-icon-link-text" title="Miami Dolphins">Miami Dolphins</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/minnesota-vikings-panoramic-pictures-and-posters/" title="Minnesota Vikings Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflvik icons-nfl-nflvik"></div><div class="category-icon-link-text" title="Minnesota Vikings">Minnesota Vikings</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/new-england-patriots-panoramic-pictures-and-posters/" title="New England Patriots Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflpat icons-nfl-nflpat"></div><div class="category-icon-link-text" title="New England Patriots">New England Patriots</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/new-orleans-saints-panoramic-pictures-and-posters/" title="New Orleans Saints Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflsts icons-nfl-nflsts"></div><div class="category-icon-link-text" title="New Orleans Saints">New Orleans Saints</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/new-york-giants-panoramic-pictures-and-posters/" title="New York Giants Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflgia icons-nfl-nflgia"></div><div class="category-icon-link-text" title="New York Giants">New York Giants</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/new-york-jets-panoramic-pictures-and-posters/" title="New York Jets Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nfljet icons-nfl-nfljet"></div><div class="category-icon-link-text" title="New York Jets">New York Jets</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/philadelphia-eagles-panoramic-pictures-and-posters/" title="Philadelphia Eagles Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nfleag icons-nfl-nfleag"></div><div class="category-icon-link-text" title="Philadelphia Eagles">Philadelphia Eagles</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/pittsburgh-steelers-panoramic-pictures-and-posters/" title="Pittsburgh Steelers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflste icons-nfl-nflste"></div><div class="category-icon-link-text" title="Pittsburgh Steelers">Pittsburgh Steelers</div>
+		</a>
+	</div>
+	
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/san-francisco-49ers-panoramic-pictures-and-posters/" title="San Francisco 49ers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nfl49 icons-nfl-nfl49"></div><div class="category-icon-link-text" title="San Francisco 49ers">San Francisco 49ers</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/seattle-seahawks-panoramic-pictures-and-posters/" title="Seattle Seahawks Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflsea icons-nfl-nflsea"></div><div class="category-icon-link-text" title="Seattle Seahawks">Seattle Seahawks</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/tampa-bay-buccaneers-panoramic-pictures-and-posters/" title="Tampa Bay Buccaneers Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflbuc icons-nfl-nflbuc"></div><div class="category-icon-link-text" title="Tampa Bay Buccaneers">Tampa Bay Buccaneers</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/tennessee-titans-panoramic-pictures-and-posters/" title="Tennessee Titans Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nfltit icons-nfl-nfltit"></div><div class="category-icon-link-text" title="Tennessee Titans">Tennessee Titans</div>
+		</a>
+	</div>
+	<div class="category-section-nfl">
+		<a class="category-item-nfl" href="{{base}}/washington-football-club-panoramic-pictures-and-posters/" title="Washington Football Club Panoramic Pictures and Posters | Fan Cave Decor">
+			<div class="category-link-icon icons-mobile-nfl-nflcom icons-nfl-nflcom"></div><div class="category-icon-link-text" title="Washington Commanders">Washington Commanders</div>
+		</a>
+	</div>
+</div>
+
+<!-- End custom area -->
+    {{#or category.subcategories category.faceted_search_enabled category.shop_by_price}}
+    {{/or}}
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}

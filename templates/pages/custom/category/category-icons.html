@@ -1,0 +1,115 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+<!-- Start header area -->
+<div class="icon-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="icon-splash-item icon-splash-niagara">
+				<a class="icon-splash-link" href="{{base}}/niagara-falls-poster-panoramic-fine-art/" title="Niagara Falls Panoramic Fine Art Wall Decor">
+					<div class="icon-splash-banner">
+						<h3>Niagara Falls</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="icon-splash-item icon-splash-ts">
+				<a class="icon-splash-link" href="{{base}}/times-square-poster-panoramic-fine-art/" title="Times Square, New York Panoramic Wall Decor">
+					<div class="icon-splash-banner">
+						<h3>Times Square</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="mid-splash-bar">
+			<div class="icon-splash-item icon-splash-stone">
+				<a class="icon-splash-link" href="{{base}}/stonehenge-poster-panoramic-fine-art/" title="Stonehenge Panoramic Fine Art Wall Decor">
+					<div class="icon-splash-banner">
+						<h3>Stonehenge</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="icon-splash-item icon-splash-taj">
+				<a class="icon-splash-link" href="{{base}}/taj-mahal-india-panorama-taj1.html" title="Taj Mahal Panoramic Fine Art Wall Decor">
+					<div class="icon-splash-banner">
+						<h3>Taj Mahal</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>	
+</div>	
+	
+<!-- Start custom area -->
+<div class="category-top"><h3>Select a Destination</h3></div>
+<div class="category-listing-nologo-short">
+	<ul>
+		<li><a href="{{base}}/albuquerque-balloon-festival-poster-panoramic-fine-art/" title="Balloon Fiesta Iconic World Landmark Panoramic Pictures">Balloon Fiesta</a></li>
+		<li><a href="{{base}}/brooklyn-bridge-poster-panoramic-fine-art/" title="Brooklyn Bridge Iconic World Landmark Panoramic Pictures">Brooklyn Bridge</a></li>
+		<li><a href="{{base}}/central-park-poster-panoramic-fine-art/" title="Central Park, NYC Panoramic Wall Art Decor">Central Park</a></li>
+		<li><a href="{{base}}/chrysler-building-poster-panoramic-fine-art/" title="Chrysler Building, New York Panoramic Wall Art">Chrysler Building</a></li>
+		<li><a href="{{base}}/eiffel-tower-poster-panoramic-fine-art/" title="Eiffel Tower, Paris, France Panoramic Wall Art">Eiffel Tower</a></li>
+		<li><a href="{{base}}/empire-state-building-poster-panoramic-fine-art/" title="Empire State Building Panoramic Wall Art">Empire State Building</a></li>
+		<li><a href="{{base}}/golden-gate-bridge-poster-panoramic-fine-art/" title="Golden Gate Bridge Panoramic Fine Art Wall Prints">Golden Gate Bridge</a></li>
+		<li><a href="{{base}}/great-wall-of-china-poster-panoramic-fine-art/" title="Great Wall of China Iconic World Landmark Panoramic Pictures">Great Wall of China</a></li>
+		<li><a href="{{base}}/leaning-tower-of-pisa-poster-panoramic-fine-art/" title="Leaning Tower of Pisa Panoramic Fine Art Decor">Leaning Tower of Pisa</a></li>
+		<li><a href="{{base}}/mont-saint-michel-panoramic-wall-decor/" title="Mont-Saint-Michel Panoramic Wall Art Decor">Mont-Saint-Michel</a></li>
+		<li><a href="{{base}}/niagara-falls-poster-panoramic-fine-art/" title="Niagara Falls Iconic World Landmark Panoramic Pictures">Niagara Falls</a></li>
+		<li><a href="{{base}}/paradise-sunset-poster-panoramic-fine-art/" title="Paradise Sunset Iconic World Landmark Panoramic Pictures">Paradise - Sunset</a></li>
+		<li><a href="{{base}}/plaza-monumental-poster-panoramic-fine-art/" title="Plaza Monumental Panoramic Fine Wall Art">Plaza Monumental</a></li>
+		<li><a href="{{base}}/portland-head-light-fine-art-panoramic-poster/" title="Portland Head Lighthouse Panoramic Wall Decor">Portland Head Light</a></li>
+		<li><a href="{{base}}/pyramids-of-giza-poster-panoramic-fine-art/" title="Pyramids of Giza Iconic World Landmark Panoramic Pictures">Pyramids of Giza</a></li>
+		<li><a href="{{base}}/roman-coliseum-poster-panoramic-fine-art/" title="Roman Coliseum Panoramic Fine Art Decor">Roman Coliseum</a></li>
+		<li><a href="{{base}}/space-shuttle-columbia-poster-panoramic-fine-art/" title="Space Shuttle Columbia Iconic World Landmark Panoramic Pictures">Space Shuttle Columbia</a></li>
+		<li><a href="{{base}}/split-rock-lighthouse-fine-art-panoramic-poster/" title="Split Rock Lighthouse Panoramic Wall Art">Split Rock Lighthouse</a></li>
+		<li><a href="{{base}}/statue-of-liberty-poster-panoramic-fine-art/" title="Statue of Liberty Panoramic Fine Art">Statue of Liberty</a></li>
+		<li><a href="{{base}}/stonehenge-poster-panoramic-fine-art/" title="Stonehenge Iconic World Landmark Panoramic Pictures">Stonehenge</a></li>
+		<li><a href="{{base}}/stourhead-england-poster-panoramic-fine-art/" title="Stourhead, England Iconic World Landmark Panoramic Pictures">Stourhead</a></li>
+		<li><a href="{{base}}/taj-mahal-india-poster-panoramic-fine-art/" title="Taj Mahal, India Iconic World Landmark Panoramic Pictures">Taj Mahal</a></li>
+		<li><a href="{{base}}/times-square-poster-panoramic-fine-art/" title="Times Square, NYC Panoramic Wall Prints">Times Square</a></li>
+		<li><a href="{{base}}/tower-bridge-london-poster-panoramic-fine-art/" title="Tower Bridge, London Panoramic Fine Art Poster">Tower Bridge</a></li>
+		<li><a href="{{base}}/one-world-trade-center-poster-panoramic-fine-art/" title="World Trade Center Panoramic Wall Decor">World Trade Center</a></li>
+	</ul>
+</div>
+
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}

@@ -1,0 +1,174 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+<!-- Start header area -->
+<div class="misccat-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="misccat-splash-item misccat-splash-nationalparks">
+				<a class="misccat-splash-link" href="{{base}}/national-parks-panoramic-pictures/" title="National Parks Scenic Panoramic Wall Decor">
+					<div class="misccat-splash-banner">
+						<h3>National Parks</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="misccat-splash-item misccat-splash-icons">
+				<a class="misccat-splash-link" href="{{base}}/world-attractions-panoramic-pictures/" title="Iconic World Sites and Attractions Wall Decor">
+					<div class="misccat-splash-banner">
+						<h3>Iconic Sites</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="mid-splash-bar">
+			<div class="misccat-splash-item misccat-splash-golfhorse">
+				<a class="misccat-splash-link" href="{{base}}/golfcourse-aerial-pictures-and-kentucky-derby-panoramas/" title="Golf and Horse Racing Panoramic Wall Decor">
+					<div class="misccat-splash-banner">
+						<h3>Golf &amp; Horse</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="misccat-splash-item misccat-splash-lighthouses">
+				<a class="misccat-splash-link" href="{{base}}/lighthouse-panoramic-pictures/" title="Lighthouse Panoramic Wall Decor">
+					<div class="misccat-splash-banner">
+						<h3>Lighthouses</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>
+</div>
+<div class="category-top">
+	<h3>Shop by Interest</h3>
+</div>
+<div class="category-listing-misc">
+	<h4>National Parks</h4>
+	<div class="category-listing-long">
+		<ul>
+			<li><a href="{{base}}/arches-national-park-scenic-landscape-panoramic-art-poster/" title="Arches National Park Panoramic Wall Art">Arches National Park</a></li>
+			<li><a href="{{base}}/bryce-canyon-scenic-landscape-panoramic-art-poster/" title="Bryce Canyon National Park Panoramic Wall Art">Bryce Canyon National Park</a></li>
+			<li><a href="{{base}}/canyonlands-national-park-scenic-landscape-panoramic-art-poster/" title="Canyonlands National Park Panoramic Wall Decor">Canyonlands National Park</a></li>
+			<li><a href="{{base}}/capitol-reef-national-park-scenic-landscape-panoramic-art-poster/" title="Capitol Reef National Park Panoramic Wall Art">Capitol Reef National Park</a></li>
+			<li><a href="{{base}}/cedar-breaks-scenic-landscape-panoramic-art-poster/" title="Cedar Breaks National Park Panoramic Wall Decor">Cedar Breaks National Park</a></li>
+			<li><a href="{{base}}/crater-lake-scenic-landscape-panoramic-art-poster/" title="Crater Lake National Park Scenic Panoramic Wall Art">Crater Lake National Park</a></li>
+			<li><a href="{{base}}/dead-horse-point/" title="Dead Horse Point State Park Panoramic Wall Decor">Dead Horse Point State Park</a></li>
+			<li><a href="{{base}}/denali-national-park-scenic-landscape-panoramic-art-prints/" title="Denali National Park Scenic Landscape Panoramic Wall Decor">Denali National Park</a></li>
+			<li><a href="{{base}}/garden-of-the-gods-national-natural-landmark-panoramic-wall-decor/" title="Garden of the Gods National Natural Landmark Wall Decor">Garden of the Gods</a></li>
+			<li><a href="{{base}}/gateway-arch-national-park-scenic-landscape-panoramic-art-poster/" title="Gateway Arch National Park Panoramic Wall Art">Gateway Arch National Park</a></li>
+			<li><a href="{{base}}/glacier-national-park-scenic-panoramic-wall-decor/" title="Glacier National Park Scenic Panoramic Wall Decor">Glacier National Park</a></li>
+			<li><a href="{{base}}/glen-canyon-scenic-landscape-panoramic-art-poster/" title="Glen Canyon Scenic Panoramic Wall Art">Glen Canyon Dam</a></li>
+			<li><a href="{{base}}/grand-canyon-scenic-landscape-panoramic-art-poster/" title="Grand Canyon National Park Panoramic Wall Art">Grand Canyon National Park</a></li>
+			<li><a href="{{base}}/grand-teton-scenic-landscape-panoramic-art-poster/" title="Grand Teton National Park Panoramic Wall Decor">Grand Teton National Park</a></li>
+			<li><a href="{{base}}/hoover-dam-scenic-landscape-panoramic-art-poster/" title="Hoover Dam Scenic Panoramic Wall Art">Hoover Dam</a></li>
+			<li><a href="{{base}}/horseshoe-bend-scenic-landscape-panoramic-art-poster/" title="Horseshoe Bend Scenic Landscape Panoramic Art">Horseshoe Bend</a></li>
+			<li><a href="{{base}}/kings-canyon-national-park-panoramic-wall-decor/" title="Kings Canyon National Park Panoramic Wall Decor">Kings Canyon National Park</a></li>
+			<li><a href="{{base}}/lake-tahoe-poster-panoramic-fine-art/" title="Lake Tahoe Scenic Panoramic Wall Art">Lake Tahoe</a></li>
+			<li><a href="{{base}}/monument-valley-scenic-landscape-panoramic-art-poster/" title="Monument Valley Scenic Landscape Panoramic Art">Monument Valley</a></li>
+			<li><a href="{{base}}/mount-rushmore-scenic-landscape-panoramic-art-poster/" title="Mount Rushmore Scenic Panoramic Wall Art">Mount Rushmore National Memorial</a></li>
+			<li><a href="{{base}}/rocky-mountain-national-park-scenic-panoramic-prints/" title="Rocky Mountain National Park Panoramic Wall Art">Rocky Mountain National Park</a></li>
+			<li><a href="{{base}}/sequoia-national-park-scenic-landscape-panoramic-art-poster/" title="Sequoia National Park Scenic Panoramic Wall Decor">Sequoia National Park</a></li>
+			<li><a href="{{base}}/shenandoah-national-park-panoramic-pictures-wall-art/" title="Shenandoah National Park Panoramic Wall Art">Shenandoah National Park</a></li>
+			<li><a href="{{base}}/voyageurs-national-park-scenic-panoramic-prints/" title="Voyageurs National Park Scenic Panoramic Wall Art">Voyageurs National Park</a></li>
+			<li><a href="{{base}}/yellowstone-national-park-scenic-landscape-panoramic-art-poster/" title="Yellowstone National Park Panoramic Wall Art">Yellowstone National Park</a></li>
+			<li><a href="{{base}}/yosemite-national-park-scenic-landscape-panoramic-art-poster/" title="Yosemite National Park Panoramic Wall Art">Yosemite National Park</a></li>
+			<li><a href="{{base}}/zion-national-park-scenic-landscape-panoramic-art-poster/" title="Zion National Park Scenic Landscape Panoramic Wall Decor">Zion National Park</a></li>
+		</ul>
+	</div>
+	
+	<h4>Iconic Sites</h4>
+	<div class="category-listing-long">
+		<ul>
+			<li><a href="{{base}}/albuquerque-balloon-festival-poster-panoramic-fine-art/" title="Albuquerque Balloon Fiesta Panoramic Wall Decor">Balloon Fiesta</a></li>
+			<li><a href="{{base}}/brooklyn-bridge-poster-panoramic-fine-art/" title="Brooklyn Bridge Panoramic Wall Decor">Brooklyn Bridge</a></li>
+			<li><a href="{{base}}/central-park-poster-panoramic-fine-art/" title="Central Park, New York City Panoramic Wall Art">Central Park</a></li>
+			<li><a href="{{base}}/chrysler-building-poster-panoramic-fine-art/" title="Chrysler Building Panoramic Wall Decor">Chrysler Building</a></li>
+			<li><a href="{{base}}/eiffel-tower-poster-panoramic-fine-art/" title="Eiffel Tower Panoramic Wall Decor">Eiffel Tower</a></li>
+			<li><a href="{{base}}/empire-state-building-poster-panoramic-fine-art/" title="Empire State Building Panoramic Wall Decor">Empire State Building</a></li>
+			<li><a href="{{base}}/golden-gate-bridge-poster-panoramic-fine-art/" title="Golden Gate Bridge Panoramic Wall Art">Golden Gate Bridge</a></li>
+			<li><a href="{{base}}/great-wall-of-china-poster-panoramic-fine-art/" title="Great Wall of China Panoramic Wall Decor">Great Wall of China</a></li>
+			<li><a href="{{base}}/leaning-tower-of-pisa-poster-panoramic-fine-art/" title="Leaning Tower of Pisa Panoramic Wall Art">Leaning Tower of Pisa</a></li>
+			<li><a href="{{base}}/mont-saint-michel-panoramic-wall-decor/" title="Mont-Saint-Michel Panoramic Wall Decor">Mont-Saint-Michel</a></li>
+			<li><a href="{{base}}/niagara-falls-poster-panoramic-fine-art/" title="Niagara Falls Panoramic Wall Art">Niagara Falls</a></li>
+			<li><a href="{{base}}/paradise-sunset-poster-panoramic-fine-art/" title="Paradise Sunset Scenic Panoramic Wall Art">Paradise - Sunset</a></li>
+			<li><a href="{{base}}/plaza-monumental-poster-panoramic-fine-art/" title="Plaza Monumental de las Ventas Panoramic Wall Decor">Plaza Monumental</a></li>
+			<li><a href="{{base}}/pyramids-of-giza-poster-panoramic-fine-art/" title="Pyramids of Giza Panoramic Wall Art">Pyramids of Giza</a></li>
+			<li><a href="{{base}}/roman-coliseum-poster-panoramic-fine-art/" title="Roman Coliseum Panoramic Wall Decor">Roman Coliseum</a></li>
+			<li><a href="{{base}}/space-shuttle-columbia-poster-panoramic-fine-art/" title="Space Shuttle Columbia Panoramic Wall Decor">Space Shuttle Columbia</a></li>
+			<li><a href="{{base}}/statue-of-liberty-poster-panoramic-fine-art/" title="Statue of Liberty Panoramic Wall Decor">Statue of Liberty</a></li>
+			<li><a href="{{base}}/stonehenge-poster-panoramic-fine-art/" title="Stonehenge Panoramic Wall Decor">Stonehenge</a></li>
+			<li><a href="{{base}}/stourhead-england-poster-panoramic-fine-art/" title="Stourhead, England Panoramic Wall Art">Stourhead</a></li>
+			<li><a href="{{base}}/taj-mahal-india-poster-panoramic-fine-art/" title="Taj Mahal, India Panoramic Wall Art">Taj Mahal, India</a></li>
+			<li><a href="{{base}}/times-square-poster-panoramic-fine-art/" title="Times Square, New York City Panoramic Wall Decor">Times Square</a></li>
+			<li><a href="{{base}}/tower-bridge-london-poster-panoramic-fine-art/" title="Tower Bridge, London Panoramic Wall Art">Tower Bridge</a></li>
+			<li><a href="{{base}}/one-world-trade-center-poster-panoramic-fine-art/" title="World Trade Center Panoramic Wall Decor">World Trade Center</a></li>
+		</ul>
+	</div>
+	
+	<h4>Golf &amp; Horse</h4>
+	<div class="category-listing-long">
+		<ul>
+			<li><a href="{{base}}/augusta-national-golf-club-masters-georgia-aerial-panoramic-panorama-fine-art-poster-print/" title="Augusta National Golf Panoramic Wall Art">Augusta National Golf Club</a></li>
+			<li><a href="{{base}}/churchill-downs-panoramic-fine-art-poster-print/" title="Churchill Downs Panoramic Fine Art">Churchill Downs</a></li>
+			<li><a href="{{base}}/gleneagles-golf-course-aerial-panoramic-fine-art-poster-print/" title="Gleneagles Hotel and Golf Courses Panoramic Wall Art">Gleneagles Hotel &amp; Golf Courses</a></li>
+			<li><a href="{{base}}/pebble-beach-golf-course-aerial-panoramic-fine-art-poster-print/" title="Pebble Beach Golf Course Panoramic Wall Art">Pebble Beach Golf Links</a></li>
+			<li><a href="{{base}}/royal-troon-golf-course-aerial-panoramic-fine-art-poster-print/" title="Royal Troon Golf Course Panoramic Wall Decor">Royal Troon Golf Club</a></li>
+			<li><a href="{{base}}/st-andrews-links-aerial-panoramic-fine-art-poster-print/" title="St Andrews Links Panoramic Wall Art">St Andrews Links</a></li>
+		</ul>
+	</div>
+	
+	<h4>Lighthouses</h4>
+	<div class="category-listing-long">
+		<ul>
+			<li><a href="{{base}}/bass-harbor-head-light-fine-art-panoramic-poster/" title="Bass Harbor Head Lighthouse Panoramic Wall Decor">Bass Harbor Head Light</a></li>
+			<li><a href="{{base}}/boston-light-fine-art-panoramic-poster/" title="Boston Light Panoramic Lighthouse Wall Decor">Boston Light</a></li>
+			<li><a href="{{base}}/cape-hatteras-lighthouse-fine-art-panoramic-poster/" title="Cape Hatteras Lighthouse Panoramic Wall Art">Cape Hatteras Lighthouse</a></li>
+			<li><a href="{{base}}/cape-neddick-light-fine-art-panoramic-poster/" title="Cape Neddick Light Panoramic Lighthouse Wall Decor">Cape Neddick Light</a></li>
+			<li><a href="{{base}}/pemaquid-point-light-fine-art-panoramic-poster/" title="Pemaquid Point Light Panoramic Wall Art">Pemaquid Point Light</a></li>
+			<li><a href="{{base}}/portland-head-light-fine-art-panoramic-poster/" title="Portland Head Light Panoramic Wall Decor">Portland Head Light</a></li>
+			<li><a href="{{base}}/split-rock-lighthouse-fine-art-panoramic-poster/" title="Split Rock Lighthouse Panoramic Wall Art">Split Rock Lighthouse</a></li>
+		</ul>
+	</div>
+</div>
+
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}
