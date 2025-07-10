@@ -3,7 +3,6 @@
         {{lang 'cart.added_to_cart.what_next' num_products=cart.quantity}}
     </h1>
 </div>
-
 <div class="modal-body">
     <div class="previewCart">
         <section class="previewCartCheckout">
@@ -12,13 +11,11 @@
                     {{lang 'cart.added_to_cart.proceed_to_checkout'}}
                 </a>
             {{/if}}
-
             <div class="previewCartCheckout-additionalCheckoutButtons">
                 {{#each cart.additional_checkout_buttons}}
                     {{{this}}}
                 {{/each}}
             </div>
-
             {{#if cart.show_multiple_address_shipping}}
                 <div class="previewCartAction-checkoutMultiple">
                     <a href="{{urls.checkout.multiple_address}}">
@@ -26,10 +23,8 @@
                     </a>
                 </div>
             {{/if}}
-
             <div class="previewCartCheckout-subtotal">
                 {{lang 'cart.added_to_cart.order_subtotal'}}
-
                 <strong class="previewCartCheckout-price">
                     {{#or customer (unless settings.hide_price_from_guests)}}
                         {{cart.sub_total.formatted}}
@@ -38,16 +33,13 @@
                     {{/or}}
                 </strong>
             </div>
-
             <p data-cart-quantity="{{cart.quantity}}">
                 {{lang 'cart.added_to_cart.your_cart_contains' num_products=cart.quantity}}
             </p>
-
             <a href="#" class="button button--primary" role="button" data-reveal-close>
                 {{lang 'cart.added_to_cart.continue_shopping'}}
             </a>
-
-            <a href="{{urls.cart}}" class="button">
+            <a href="{{urls.cart}}" class="button black-button">
                 {{lang 'cart.added_to_cart.view_or_edit_cart'}}
             </a>
         </section>
@@ -64,16 +56,13 @@
                         }}
                     </div>
                 </figure>
-
                 <div class="productView-details">
                     <h2 class="productView-title">
                         {{name}}
                     </h2>
-
                     <div class="productView-brand">
                         {{brand.name}}
                     </div>
-
                     <div class="productView-price">
                         {{#or ../customer (unless ../settings.hide_price_from_guests)}}
                             {{quantity}} &times; {{price.formatted}}
@@ -81,7 +70,6 @@
                             {{> components/common/login-for-pricing}}
                         {{/or}}
                     </div>
-
                     {{#each options}}
                         <dl class="productView-info">
                             <dt class="productView-info-name">
