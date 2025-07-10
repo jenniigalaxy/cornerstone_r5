@@ -1,0 +1,1350 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{#partial "page"}}
+
+<div class="frameup-page">
+	<div class="frameup-page-intro">
+        <div class="frameup-page-info">
+        		<h1>Want it Framed?</h1>
+        		<div class="frameup-intro">Do you have a Blakeway print and want to get it framed?<br>
+        		For fast service, purchase a framed print &amp; get a refund for your unframed print. See below for details.</div>
+        	</div>
+        <div class="frameup-page-new">
+        <img src="https://www.panoramas.com/content/images/frameup/new-star.png" alt="New, Simplified Process!" rel="nopin">
+        </div>
+        </div>
+	<div class="frameup-process">
+		<div class="frameup-process-row">
+			<div class="frameup-process-col">
+				<div class="frameup-step-number step-action">1</div>
+				<div class="frameup-step-content step-action">
+					<h3><span class="frameup-person">You</span> purchase a<br>
+					framed print<br>on our website.</h3>
+					<p>If you have an autographed print,<br>
+					or can't find your print<br>on our website, <a href="#frameup-contact" class="frameup-contact">go here</a>.</p>
+				</div>
+			</div>
+			<div class="frameup-process-col">
+				<div class="frameup-process-img" id="frameup-img-1">
+					<img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/frameup/frame-1-color_r5.jpg" nopin="nopin" alt="Buy Your Frame" aria-label="Buy Your Frame">
+				</div>
+			</div>
+		</div>
+		<div class="frameup-process-row">
+			<div class="frameup-process-col">
+				<div class="frameup-step-number step-action">2</div>
+				<div class="frameup-step-content step-action">
+					<h3>To receive your refund for the<br />
+					unframed print, clip the bottom left<br>
+				    corner of your print and mail it<br>
+					to us with the frame upgrade<br>
+					form as proof of purchase.</h3>
+					<p>Need the form? <a href="https://www.panoramas.com/content/images/frameup/Blakeway%20Order%20Form.pdf" class="frameup-contact" target="_blank">Get it here!</a></p>
+				</div>
+			</div>
+			<div class="frameup-process-col">
+				<div class="frameup-process-img" id="frameup-img-3">
+					<img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/frameup/frame-2-color_r10.jpg" nopin="nopin" alt="You Clip & Mail" aria-label="You Clip & Mail">
+				</div>
+			</div>
+		</div>
+		<div class="frameup-process-row">
+			<div class="frameup-process-col">
+				<div class="frameup-step-number step-action">3</div>
+				<div class="frameup-step-content step-action">
+					<h3>After receiving your order, <span class="frameup-person">we</span><br />
+					ship the framed product to you.</h3>
+					<p>We ship orders the same day<br />
+					if they are placed by 2 PM CT.</p>
+				</div>
+			</div>
+			<div class="frameup-process-col">
+				<div class="frameup-process-img" id="frameup-img-2">
+					<img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/frameup/frame-3-color_r2.jpg" nopin="nopin" alt="We Ship It" aria-label="We Ship It">
+				</div>
+			</div>
+		</div>
+		<div class="frameup-process-row">
+			<div class="frameup-process-col">
+				<div class="frameup-step-number step-action">4</div>
+				<div class="frameup-step-content step-action">
+					<h3>When we receive your proof<br />
+					of purchase, we issue a refund<br />
+					for the unframed print to<br />
+					your credit card.</h3>
+					<p>Refund offer is only valid<br>
+					<b>60 days</b> from the purchase<br>
+					of the <b>FRAMED</b> panorama.</p>
+				</div>
+			</div>
+			<div class="frameup-process-col">
+				<div class="frameup-process-img" id="frameup-img-4">
+					<img src="https://cdn11.bigcommerce.com/s-xexc16uo8q/content/images/frameup/frame-4-color_r5.jpg" nopin="nopin" alt="We Refund You" aria-label="We Refund You">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="frameup-notice-outer" id="frameup-contact">
+		<div class="frameup-notice">
+			<p>Please note: Due to stocked frame sizes, we are only able to frame our own Blakeway Panoramas. If you have an autographed panorama, can't find your framed print on our website, want to pay by check, or have any questions, please contact us at:</p>
+			<div class="frameup-notice-contact">
+				<p><a href="mailto:info@panoramas.com" target="_blank" title="Email Us">info@panoramas.com</a><br>
+				<a href="tel:18003347266" title="Call us Toll Free">1-800-334-7266</a> or <a href="tel:19529419797" title="Call Us">952-941-9797</a><br>
+				Hours: Monday - Friday, 8 AM - 5 PM CT</p>
+			</div>
+			<div class="frameup-notice-address">
+				<p>Mailing Address:<br>
+				Blakeway Panoramas<br>
+				Attn: Frame Upgrade<br>
+				5451 Smetana Drive<br>
+				Minnetonka, MN 55343</p>
+			</div>
+		</div>
+	</div>
+	<div class="frameup-page-ending">
+		<h2>Ready to find your framed print?</h2>
+	</div>
+	<div class="frameup-search">
+		<form class="form" onsubmit="return false" data-url="{{urls.search}}" data-quick-search-form>
+		  <fieldset class="form-fieldset">
+		      <div class="form-field">
+		          <label class="is-srOnly" for="search_query_adv">{{lang 'search.results.form_labe'}}</label>
+				<div class="form-prefixPostfix">
+		          		<input class="form-input" id="search_query_adv" name="search_query_adv" value="">
+					<input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value=""><svg><use href="#icon-magnifying-glass-solid" /></svg>
+				</div>
+		      </div>
+		  </fieldset>
+	    </form>
+	    <section class="quickSearchResults" data-bind="html: results"></section>
+	    <p role="status"
+		 aria-live="polite"
+		 class="aria-description--hidden"
+		 data-search-aria-message-predefined-text="{{{lang 'search.results.quick_count_live'}}}"
+	    ></p>
+	</div>
+<div class="frameup-page-reviews">
+	<h3>Check out some of our past reviews from other customers!</h3>
+</div>
+<div class="frameup-reviews">
+	<ul class="productReviews-list" id="productReviews-list">
+            
+            
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Looks Great!</h5>
+                            <p class="productReview-author">
+                                Posted by Arthur M.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Panorama looks amazing and absolutely flawless. Delivered on time and just as ordered. Expectations definitely exceeded.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Going right on the wall</h5>
+                            <p class="productReview-author">
+                                Posted by Elio
+                            </p>
+                    </header>
+                    <p class="productReview-body">Great job and more cost effective than the local framing and art supply stores.  Speedy delivery and top-notch quality.  Going right on the wall.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Beautiful framing</h5>
+                            <p class="productReview-author">
+                                Posted by Tony G.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Price is better than my local framer, even with shipping. They did a fantastic job and shipped back very quickly.</p>
+                </article>
+            </li>
+            
+            
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Hoover Dam</h5>
+                            <p class="productReview-author">
+                                Posted by Patricia M.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Really pleased!  A really nice looking frame as well as a sturdy quality.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Framing of Grand Canyon print</h5>
+                            <p class="productReview-author">
+                                Posted by Lisa G. B.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Blakeway was easy to work with  and I am delighted with both the turnaround time and quality of the framing!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Jackson Wyoming</h5>
+                            <p class="productReview-author">
+                                Posted by Betty C.
+                            </p>
+                    </header>
+                    <p class="productReview-body">I purchased two panorama photographs while in Jackson. The framed pictures are gorgeous!  Even better than I imagined.</p>
+                </article>
+            </li>
+            
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Nicely done framing</h5>
+                            <p class="productReview-author">
+                                Posted by Angela
+                            </p>
+                    </header>
+                    <p class="productReview-body">Beautifully framed. Nice craftsmanship and care taken to frame my print!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">The service was fast and frame is top quality.</h5>
+                            <p class="productReview-author">
+                                Posted by Bob G.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Great job, will use your services again!</p>
+                </article>
+            </li>
+            
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Panoramic Picture Frame Upgrade</h5>
+                            <p class="productReview-author">
+                                Posted by Lauren K.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Looks exactly as pictured. The process was easy, and turnaround time was practically immediate!  Packaging was well done, so product arrived in mint condition.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Deluxe Frame</h5>
+                            <p class="productReview-author">
+                                Posted by Chris R.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Quick and awesome service and with a sturdy frame.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Panoramic Upgrade</h5>
+                            <p class="productReview-author">
+                                Posted by Wayne K.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Absolutely excellent Company to work with.  Great communication and turnover time.  Awesome.</p>
+                </article>
+            </li>
+            
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">College football field frame</h5>
+                            <p class="productReview-author">
+                                Posted by Brian C.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Excellent work on framing the picture. Very quick turn around too!!!</p>
+                </article>
+            </li>
+            
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Framing</h5>
+                            <p class="productReview-author">
+                                Posted by Mike J.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Excellent job! The turnaround time was amazing. I would highly recommend Blakeway!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Connecticut Huskies Womans B-Ball tournament</h5>
+                            <p class="productReview-author">
+                                Posted by Richard P.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Very positive impression of this whole process, My Son will be very happy with panoramic picture!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Great job</h5>
+                            <p class="productReview-author">
+                                Posted by William
+                            </p>
+                    </header>
+                    <p class="productReview-body">Had the Winter Classic Dallas Stars framed with a nice green mat - Was $160 cheaper than both big hobby stores!</p>
+                </article>
+            </li>
+            
+            
+            
+            
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Blues Banner Raising Panorama</h5>
+                            <p class="productReview-author">
+                                Posted by Emily
+                            </p>
+                    </header>
+                    <p class="productReview-body">I had originally purchased a tubed version and wanted it framed. The staff were very easy to communicate with and sort out getting a framed version in exchange. It arrived in about 4 days and that was including the weekend! I'm so pleased with both the panorama and the customer service!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">2020 Winter Classic - GO STARS!</h5>
+                            <p class="productReview-author">
+                                Posted by Don L.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Excellent quality frame!  Looks perfect in my study!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Frame review</h5>
+                            <p class="productReview-author">
+                                Posted by Dana J. S.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Framing was excellent, very happy with the finished product, thank you for getting it done so super fast.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Panorama Frame</h5>
+                            <p class="productReview-author">
+                                Posted by Chase W.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Excellent framing job. Looks beautiful and the whole process was extremely fast.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Framing</h5>
+                            <p class="productReview-author">
+                                Posted by Sonya
+                            </p>
+                    </header>
+                    <p class="productReview-body">Excellent work. Thanks for the super fast delivery.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Poster framing</h5>
+                            <p class="productReview-author">
+                                Posted by Richard H.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Excellent job at a very reasonable price and quick service.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Excellent quality picture framing</h5>
+                            <p class="productReview-author">
+                                Posted by Thomas J. H. 
+                            </p>
+                    </header>
+                    <p class="productReview-body">The panoramic framing is done to perfection.  I would recommend my family and friends to use Blakeway for their picture framing ideas.</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Panorama Frame</h5>
+                            <p class="productReview-author">
+                                Posted by Margaret E.
+                            </p>
+                    </header>
+                    <p class="productReview-body">I am thrilled with how the framing turned out.  The process was easy.  Turnaround time was quick.  Packaging was sturdy and protected the frame very well.  Thank you!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Framed Notre Dame Photo</h5>
+                            <p class="productReview-author">
+                                Posted by Gary W.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Beautiful Frame! Fast service. Cheaper than Hobby Lobby on Sale! Very Happy!</p>
+                </article>
+            </li>
+            
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Lambeau Field Panorama</h5>
+                            <p class="productReview-author">
+                                Posted by Mike W.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Quick and Easy! The picture came yesterday. Picture is fantastic. It will look good in my office to impress all of my fellow coworker Bronco fans in Denver!!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Excellent frame</h5>
+                            <p class="productReview-author">
+                                Posted by Ernesto
+                            </p>
+                    </header>
+                    <p class="productReview-body">Very nice frame for the price point paid. Professionally installed. Thanks!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Amazing</h5>
+                            <p class="productReview-author">
+                                Posted by Nicole
+                            </p>
+                    </header>
+                    <p class="productReview-body">The process of getting my print frames was so easy and convenient!   I think it took less then a week for it to come to me and it looks amazing!  The directions are very straight forward and easy to follow!  Their communication with you via email once you place the order is excellent as well.   I would definitely recommend this to anyone I know!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Framing of my LV Golden Knights poster.</h5>
+                            <p class="productReview-author">
+                                Posted by Bill H.
+                            </p>
+                    </header>
+                    <p class="productReview-body">Excellent service..... and thank you!</p>
+                </article>
+            </li>
+            <li class="productReview">
+                <article>
+                    <header>
+                        <span class="productReview-rating rating--small">
+                            <span role="img" aria-label="Product rating is 5 of 5">
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+            <span class="icon icon--ratingFull">
+                <svg>
+                    <use href="#icon-star"></use>
+                </svg>
+            </span>
+</span>
+                            <span class="productReview-ratingNumber">5</span>
+                        </span>
+                        <h5 class="productReview-title">Nice job</h5>
+                            <p class="productReview-author">
+                                Posted by Lucia
+                            </p>
+                    </header>
+                    <p class="productReview-body">The framing of our Chicago skyline is beautiful! Prompt and professional service.</p>
+                </article>
+            </li>
+        </ul>
+</div>
+</div>
+
+    
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+{{/partial}}
+{{> layout/base}}

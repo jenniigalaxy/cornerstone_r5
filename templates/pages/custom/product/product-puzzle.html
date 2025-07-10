@@ -1,0 +1,39 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{inject 'productId' product.id}}
+
+{{#partial "page"}}
+    {{#each product.shipping_messages}}
+        {{> components/common/alert/alert-info message}}
+    {{/each}}
+
+    <div>
+        {{> components/products/product-view-puzzle}}
+
+        {{{region name="product_below_content"}}}
+
+        {{#if product.videos.list.length}}
+            {{> components/products/videos product.videos}}
+        {{/if}}
+
+        {{#all settings.show_product_reviews theme_settings.show_product_reviews (if theme_settings.show_product_details_tabs '!==' true)}}
+            {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+        {{/all}}
+
+        {{> components/products/tabs}}
+    </div>
+
+    {{> components/products/schema}}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}
+<script src=https://widget.sezzle.com/v1/javascript/price-widget?uuid=d44b557e-d238-44d9-8f5f-cc04c3413d07></script>
