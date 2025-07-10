@@ -24,11 +24,12 @@
                             <span class="previewCartItem-brand">
                                 {{brand.name}}
                             </span>
-
                             <h6 class="previewCartItem-name">
                                 <a href="{{url}}" alt="{{name}}" title="{{name}}">{{name}}</a>
                             </h6>
-
+                            <span class="previewCartItem-sku">
+                                Item #: <span class="previewCartItem-sku-product">{{sku}}</span>
+                            </span><br />
                             <span class="previewCartItem-price">
                                 {{#if quantity '>' 1}}
                                     {{quantity}} &times;
