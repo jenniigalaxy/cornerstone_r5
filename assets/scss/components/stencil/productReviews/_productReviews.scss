@@ -24,7 +24,9 @@
     float: none;
     font-size: fontSize("base");
     vertical-align: top;
-
+    max-width:45%;
+    border:none;
+    margin:.5rem 1rem 1rem;
     @include breakpoint("medium") {
         width: grid-calc(6, $total-columns);
     }
@@ -33,15 +35,23 @@
         width: grid-calc(4, $total-columns);
     }
 }
-
 .productReview-title {
     margin: 0;
     text-transform: none;
+    font-weight: 500;
+    color: #000;
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+    letter-spacing:-1px;
 }
-
 .productReview-author {
     color: stencilColor("color-textSecondary");
     margin-bottom: spacing("base");
+    font-size:14px;
+    font-weight:500;
+    text-transform:uppercase;
+    color:#000;
 }
 
 .productReview-rating {
@@ -51,4 +61,11 @@
 
 .productReview-ratingNumber {
     @include u-hidden("visually");
+}
+div.productView-rating {
+    vertical-align: middle;
+    color: #096bc4;
+}
+.footer-payment-icons svg, .icon--ratingFull svg {
+    fill: #FFDA44;
 }
