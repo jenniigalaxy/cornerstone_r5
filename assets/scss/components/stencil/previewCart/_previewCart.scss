@@ -7,6 +7,7 @@
 // -----------------------------------------------------------------------------
 
 .previewCart {
+    z-index:20000;
     @include grid-row;
 
     @include breakpoint("medium") {
@@ -19,7 +20,7 @@
         }
 
         .productView-image {
-            @include grid-column(7);
+            @include grid-column(12);
             display: flex;
             flex-direction: column;
         }
@@ -31,7 +32,7 @@
         }
 
         .productView-details {
-            @include grid-column(5);
+            @include grid-column(12);
         }
     }
 
@@ -44,6 +45,7 @@
     background: container("fill", "dark");
     padding: spacing("base");
     text-align: center;
+    color:#000;
 
     @include breakpoint("medium") {
         @include grid-column(3, $float:right);
@@ -54,6 +56,9 @@
         display: block;
         margin: 0;
         width: 100%;
+        text-transform:uppercase;
+        font-weight:500;
+        font-size:15px;
 
         + p {
             margin-top: spacing("half");
@@ -104,4 +109,81 @@
     @include breakpoint("medium") {
         display: block;
     }
+}
+
+// Custom additions
+// -----------------------------------------------------------------------------
+.previewCartItem-content .previewCartItem-name, .previewCartItem-content .previewCartItem-price {
+    font-size:15px;
+    color:#000;
+}
+.previewCartItem-price {
+    margin-bottom:1.2rem;
+}
+.previewCartItem-image img {
+    padding:0 1rem;
+}
+.previewCartItem-sku {
+    font-size:15px;
+	color:#000;
+}
+.previewCartItem-sku-product {
+    color:#096bc4;
+    font-weight:500;
+}
+a.button.button--small.button--primary {
+    text-transform:uppercase;
+    font-weight:500;
+}
+.previewCartAction-viewCart a.button.button--small.button--action {
+    background:#000;
+    color:#FFF;
+    text-transform:uppercase;
+    font-weight:500;
+}
+.previewCartAction-viewCart a.button.button--small.button--action:hover {
+    background:#666;
+}
+.black-button {
+    background:#000;
+    color:#FFF;
+}
+.black-button:hover {
+    background:#666;
+    color:#FFF;
+}
+.previewCartItem-brand {
+    color:#FFF;
+    font-size:1px;
+}
+.previewCartItem + .previewCartItem {
+    border-top: 0;
+}
+.previewCartAction {
+    margin: 0 auto;
+    max-width: 75rem;
+    width: 100%;
+    border-top: 2px solid #E5E5E5;
+    display: block;
+    padding: 1.5rem 0.75rem;
+}
+.modal-body .previewCart section.productView figure.productView-image {
+    display:block;
+    clear:both;
+    float:none;
+    flex:none;
+}
+.modal-body .previewCart section.productView div.productView-details {
+    display:block;
+    clear:both;
+    float:none;
+    flex:none;
+}
+.previewCart .productView {
+    display:block;
+}
+.modal-content .modal-body .previewCart section.productView .productView-details h4.productView-title {
+    font-weight:500;
+    letter-spacing:-1px;
+    font-size:24px;
 }
