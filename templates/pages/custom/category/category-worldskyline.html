@@ -1,0 +1,219 @@
+---
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "productSku" (pluck category.products 'sku')}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{{pagination.category.previous}}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{{pagination.category.next}}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<h1 class="page-heading">{{category.name}}</h1>
+    {{{region name="category_below_header"}}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+<div class="page">
+<!-- Start header area -->
+<div class="worldskyline-splash">
+	<article class="splash">
+		<div class="top-splash-bar">
+			<div class="worldskyline-splash-item worldskyline-splash-london">
+				<a class="worldskyline-splash-link" href="{{base}}/london-england-panoramic-skyline-pictures/" title="London, Endland City Skyline Panoramic Wall Decor">
+					<div class="worldskyline-splash-banner">
+						<h3>London</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="worldskyline-splash-item worldskyline-splash-paris">
+				<a class="worldskyline-splash-link" href="{{base}}/paris-france-panoramic-skyline-pictures/" title="Paris, France City Skyline Panoramic Wall Decor">
+					<div class="worldskyline-splash-banner">
+						<h3>Paris</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="med-splash-bar">
+			<div class="worldskyline-splash-item worldskyline-splash-sydney">
+				<a class="worldskyline-splash-link" href="{{base}}/sydney-australia-panoramic-skyline-pictures/" title="Sydney, Australia City Skyline Panoramic Wall Decor">
+					<div class="worldskyline-splash-banner">
+						<h3>Sydney</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+			<div class="worldskyline-splash-item worldskyline-splash-madrid">
+				<a class="worldskyline-splash-link" href="{{base}}/madrid-spain-panoramic-skyline-pictures/" title="Madrid, Spain Panoramic City Skyline Wall Art">
+					<div class="worldskyline-splash-banner">
+						<h3>Madrid</h3>
+						<div class="splash-button">Shop Now</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</article>	
+</div>	
+<!-- Start custom area -->
+
+<div class="category-top"><h3>Shop by City</h3></div>
+<div class="category-listing-nologo">
+	<ul>
+		<li>
+			<a href="{{base}}/amsterdam-netherlands-panoramic-skyline-pictures/" title="Amsterdam, Netherlands World City Skyline Panoramic Wall Decor">Amsterdam, Netherlands</a>
+		</li>
+		<li>
+			<a href="{{base}}/athens-greece-panoramic-skyline-pictures/" title="Athens, Greece World City Skyline Panoramic Wall Decor">Athens, Greece</a>
+		</li>
+		<li>
+			<a href="{{base}}/auckland-new-zealand-panoramic-skyline-pictures/" title="Auckland, New Zealand World City Skyline Panoramic Wall Decor">Auckland, New Zealand</a>
+		</li>
+		<li>
+			<a href="{{base}}/barcelona-spain-panoramic-skyline-pictures/" title="Barcelona, Spain World City Skyline Panoramic Wall Decor">Barcelona, Spain</a>
+		</li>
+		<li>
+			<a href="{{base}}/bath-england-panoramic-skyline-pictures/" title="Bath, England World City Skyline Panoramic Wall Decor">Bath, England</a>
+		</li>
+		<li>
+			<a href="{{base}}/belfast-northern-ireland-panoramic-skyline-pictures/" title="Belfast, Northern Ireland World City Skyline Panoramic Wall Decor">Belfast, Northern Ireland</a>
+		</li>
+		<li>
+			<a href="{{base}}/bergen-norway-panoramic-skyline-pictures/" title="Bergen, Norway World City Skyline Panoramic Wall Decor">Bergen, Norway</a>
+		</li>
+		<li>
+			<a href="{{base}}/berlin-germany-panoramic-skyline-pictures/" title="Berlin, Germany World City Skyline Panoramic Wall Decor">Berlin, Germany</a>
+		</li>
+		<li>
+			<a href="{{base}}/budapest-hungary-panoramic-skyline-pictures/" title="Budapest, Hungary World City Skyline Panoramic Wall Decor">Budapest, Hungary</a>
+		</li>
+		<li>
+			<a href="{{base}}/cape-town-south-africa-panoramic-skyline-pictures/" title="Cape Town, South Africa World City Skyline Panoramic Wall Decor">Cape Town, South Africa</a>
+		</li>
+		<li>
+			<a href="{{base}}/cardiff-wales-panoramic-skyline-pictures/" title="Cardiff, Wales World City Skyline Panoramic Wall Decor">Cardiff, Wales</a>
+		</li>
+		<li>
+			<a href="{{base}}/dublin-ireland-panoramic-skyline-pictures/" title="Dublin, Ireland World City Skyline Panoramic Wall Decor">Dublin, Ireland</a>
+		</li>
+		<li>
+			<a href="{{base}}/edinburgh-scotland-panoramic-skyline-pictures/" title="Edinburgh, Scotland World City Skyline Panoramic Wall Decor">Edinburgh, Scotland</a>
+		</li>
+		<li>
+			<a href="{{base}}/florence-italy-panoramic-skyline-pictures/" title="Florence, Italy World City Skyline Panoramic Wall Decor">Florence, Italy</a>
+		</li>
+		<li>
+			<a href="{{base}}/frankfurt-germany-panoramic-skyline-pictures/" title="Frankfurt, Germany World City Skyline Panoramic Wall Decor">Frankfurt, Germany</a>
+		</li>
+		<li>
+			<a href="{{base}}/hong-kong-china-panoramic-skyline-pictures/" title="Hong Kong, China World City Skyline Panoramic Wall Decor">Hong Kong, China</a>
+		</li>
+		<li>
+			<a href="{{base}}/istanbul-turkey-panoramic-skyline-pictures/" title="Istanbul, Turkey World City Skyline Panoramic Wall Decor">Istanbul, Turkey</a>
+		</li>
+		<li>
+			<a href="{{base}}/jerusalem-israel-panoramic-skyline-pictures/" title="Jerusalem, Israel World City Skyline Panoramic Wall Decor">Jerusalem, Israel</a>
+		</li>
+		<li>
+			<a href="{{base}}/lisbon-portugal-panoramic-skyline-pictures/" title="Lisbon, Portugal World City Skyline Panoramic Wall Decor">Lisbon, Portugal</a>
+		</li>
+		<li>
+			<a href="{{base}}/liverpool-england-panoramic-skyline-pictures/" title="Liverpool, England World City Skyline Panoramic Wall Decor">Liverpool, England</a>
+		</li>
+		<li>
+			<a href="{{base}}/london-england-panoramic-skyline-pictures/" title="London, England World City Skyline Panoramic Wall Decor">London, England</a>
+		</li>
+		<li>
+			<a href="{{base}}/madrid-spain-panoramic-skyline-pictures/" title="Madrid, Spain World City Skyline Panoramic Wall Decor">Madrid, Spain</a>
+		</li>
+		<li>
+			<a href="{{base}}/monte-carlo-monaco-panoramic-skyline-pictures/" title="Monte Carlo, Monaco World City Skyline Panoramic Wall Decor">Monte Carlo, Monaco</a>
+		</li>
+		<li>
+			<a href="{{base}}/montreal-quebec-panoramic-skyline-pictures/" title="Montreal, Quebec World City Skyline Panoramic Wall Decor">Montreal, Quebec</a>
+		</li>
+		<li>
+			<a href="{{base}}/moscow-russia-panoramic-skyline-pictures/" title="Moscow, Russia World City Skyline Panoramic Wall Decor">Moscow, Russia</a>
+		</li>
+		<li>
+			<a href="{{base}}/munich-germany-panoramic-skyline-pictures/" title="Munich, Germany World City Skyline Panoramic Wall Decor">Munich, Germany</a>
+		</li>
+		<li>
+			<a href="{{base}}/oslo-norway-panoramic-skyline-pictures/" title="Oslo, Norway World City Skyline Panoramic Wall Decor">Oslo, Norway</a>
+		</li>
+		<li>
+			<a href="{{base}}/paris-france-panoramic-skyline-pictures/" title="Paris, France World City Skyline Panoramic Wall Decor">Paris, France</a>
+		</li>
+		<li>
+			<a href="{{base}}/perth-australia-panoramic-skyline-pictures/" title="Perth, Australia World City Skyline Panoramic Wall Decor">Perth, Australia</a>
+		</li>
+		<li>
+			<a href="{{base}}/pisa-italy-panoramic-skyline-pictures/" title="Pisa, Italy World City Skyline Panoramic Wall Decor">Pisa, Italy</a>
+		</li>
+		<li>
+			<a href="{{base}}/prague-czech-republic-panoramic-skyline-pictures/" title="Prague, Czech Republic World City Skyline Panoramic Wall Decor">Prague, Czech Republic</a>
+		</li>
+		<li>
+			<a href="{{base}}/rome-italy-panoramic-skyline-pictures/" title="Rome, Italy World City Skyline Panoramic Wall Decor">Rome, Italy</a>
+		</li>
+		<li>
+			<a href="{{base}}/santorini-greece-panoramic-skyline-pictures/" title="Santorini, Greece World City Skyline Panoramic Wall Decor">Santorini, Greece</a>
+		</li>
+		<li>
+			<a href="{{base}}/singapore-panoramic-skyline-pictures/" title="Singapore World City Skyline Panoramic Wall Decor">Singapore</a>
+		</li>
+		<li>
+			<a href="{{base}}/stockholm-sweden-panoramic-skyline-pictures/" title="Stockholm, Sweden World City Skyline Panoramic Wall Decor">Stockholm, Sweden</a>
+		</li>
+		<li>
+			<a href="{{base}}/sydney-australia-panoramic-skyline-pictures/" title="Sydney, Australia World City Skyline Panoramic Wall Decor">Sydney, Australia</a>
+		</li>
+		<li>
+			<a href="{{base}}/tokyo-japan-panoramic-skyline-pictures/" title="Tokyo, Japan World City Skyline Panoramic Wall Decor">Tokyo, Japan</a>
+		</li>
+		<li>
+			<a href="{{base}}/toronto-ontario-panoramic-skyline-pictures/" title="Toronto, Ontario World City Skyline Panoramic Wall Decor">Toronto, Ontario</a>
+		</li>
+		<li>
+			<a href="{{base}}/vancouver-bc-panoramic-skyline-pictures/" title="Vancouver, BC World City Skyline Panoramic Wall Decor">Vancouver, BC</a>
+		</li>
+		<li>
+			<a href="{{base}}/venice-italy-panoramic-skyline-pictures/" title="Venice, Italy World City Skyline Panoramic Wall Decor">Venice, Italy</a>
+		</li>
+		<li>
+			<a href="{{base}}/vienna-austria-panoramic-skyline-pictures/" title="Vienna, Austria World City Skyline Panoramic Wall Decor">Vienna, Austria</a>
+		</li>
+		<li>
+			<a href="{{base}}/zurich-switzerland-panoramic-skyline-pictures/" title="Zurich, Switzerland World City Skyline Panoramic Wall Decor">Zurich, Switzerland</a>
+		</li>
+	</ul>
+</div>
+
+<!-- End custom area -->
+    {{#or category.subcategories category.faceted_search_enabled category.shop_by_price}}
+    {{/or}}
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+{{{category.description}}}
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/partial}}
+{{> layout/base}}
