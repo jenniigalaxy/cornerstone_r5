@@ -7,10 +7,8 @@
 ///
 @function get-padding($size) {
     $list: str-split($size, "x");
-
     $width: to-number(nth($list, 1));
     $height: to-number(nth($list, 2));
-
     @return percentage($height/$width);
 }
 
@@ -23,7 +21,6 @@
 ///
 @function get-width($size) {
     $list: str-split($size, "x");
-
     @return nth($list, 1) + "px";
 }
 
@@ -36,6 +33,5 @@
 ///
 @function get-height($size) {
     $list: str-split($size, "x");
-
     @return nth($list, 2) + "px";
 }
