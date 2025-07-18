@@ -6,8 +6,7 @@ cart: true
 {{inject 'invalidEntryMessage' (lang 'cart.invalid_entry_message')}}
 <div class="page">
 
-    <div class="page-content" data-cart>
-        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <div class="page-content page-cart-content" data-cart>
 
         {{> components/cart/page-title}}
 
@@ -18,16 +17,19 @@ cart: true
         {{#if cart.items.length}}
             <div class="loadingOverlay"></div>
 
-            <div data-cart-content class="cart-content-padding-right">
+            <div data-cart-content class="cart-content-padding-right data-cart-content-left">
                 {{> components/cart/content}}
             </div>
-
-            <div data-cart-totals class="cart-content-padding-right">
+            <div class="cart-continue">
+                <div class="cart-actions">
+                    <a class="button" href="https://www.panoramas.com" title="Continue Shopping">Continue Shopping</a>
+                </div>
+            </div>
+            <div data-cart-totals class="cart-content-padding-right data-cart-totals-right">
                 {{> components/cart/totals}}
             </div>
-
             {{{region name="cart_below_totals"}}}
-
+            <div class="cart-checkout-bottom">
             {{#or customer (unless settings.hide_price_from_guests)}}
                 {{#if cart.show_primary_checkout_button}}
                     <div class="cart-actions cart-content-padding-right">
@@ -56,6 +58,7 @@ cart: true
                         {{> components/cart/additional-checkout-buttons}}
                     </div>
                 {{/if}}
+            </div>
             {{else}}
                 <div class="cart-actions cart-content-padding-right">
                     <a class="button" href="{{urls.auth.login}}" title="{{lang 'cart.login_to_checkout'}}">{{lang 'cart.login_to_checkout'}}</a>
@@ -67,6 +70,23 @@ cart: true
         {{/if}}
 
     </div>
+    <div class="cart-footer">
+        <div class="cart-footer-inner">
+            <div class="cart-footer-section">
+                <h4>Questions?</h4>
+                <p>Call <a href="tel:18003347266" style="white-space:nowrap;">1-800-334-7266</a></p>
+            </div>
+            <div class="cart-footer-section">
+                <h4 style="white-space:nowrap;">Easy Returns</h4>
+                <p>Within 30 Days</p>
+            </div>
+            <div class="cart-footer-section">
+                <h4 style="white-space:nowrap;">Secure Shopping</h4>
+                <p>256 Bit Encryption</p>
+        </div>
+    </div>
 </div>
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 {{/partial}}
 {{> layout/base}}
+<script src=https://widget.sezzle.com/v1/javascript/price-widget?uuid=d44b557e-d238-44d9-8f5f-cc04c3413d07></script>
